@@ -1,0 +1,31 @@
+name: Deploy to WPEngine
+
+on:
+  push:
+    branches:
+      - main  # or the branch you want to deploy from
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # GitHub Actions run on Linux VMs
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'  # specify your PHP version
+
+      - name: Install Dependencies
+        run: composer install
+
+      - name: Deploy to WPEngine
+        env:
+          WPENGINE_API_TOKEN: ${{ secrets.WPENGINE_API_TOKEN }}
+          WPENGINE_SITE_ID: ${{ secrets.WPENGINE_SITE_ID }}
+          WPENGINE_ENVIRONMENT: ${{ secrets.WPENGINE_ENVIRONMENT }}
+        run: |
+          curl -X POST "https://api.wpengine.com/v1/sites/${{ secrets.WPENGINE_SITE_ID }}/environments/${{ secrets.WPENGINE_ENVIRONMENT }}/deployments" \
+          -H "Authorization: Bearer $WPENGINE_API_TOKEN"
