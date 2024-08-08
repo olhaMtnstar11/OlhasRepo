@@ -1,0 +1,405 @@
+0000.000 (0) Opened log file at time: Wed, 07 Aug 2024 19:12:28 +0000 on http://localhost:10003
+0000.000 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.24.4 WP: 6.5.5 PHP: 8.1.29 (fpm-fcgi, Darwin MSC-MAC-6477369.local 23.5.0 Darwin Kernel Version 23.5.0: Wed May  1 20:13:18 PDT 2024; root:xnu-10063.121.3~5/RELEASE_ARM64_T6030 arm64) MySQL: 8.0.16 (max packet size=16777216) WPLANG: en_US Server: nginx/1.16.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 7.1M | 8M) multisite: N openssl: OpenSSL 1.1.1w  11 Sep 2023 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.001 (0) Free space on disk containing Updraft's temporary directory: 318915.2 MB
+0000.001 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.002 (0) Semaphore (fd, wp_options) being initialised
+0000.003 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.004 (0) Set semaphore last lock (fd) time to 2024-08-07 19:12:28
+0000.004 (0) Semaphore lock (fd) complete
+0000.005 (0) Backup run: resumption=0, nonce=81840623446a, file_nonce=81840623446a begun at=1723057948 (0s ago), job type=backup
+0000.005 (0) Scheduling a resumption (1) after 300 seconds (1723058248) in case this run gets aborted
+0000.015 (0) Checking if we have a zip executable available
+0000.016 (0) Testing: /usr/bin/zip
+0000.034 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.035 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.035 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.035 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.036 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.053 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.054 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.055 (0) Working binary zip found: /usr/bin/zip
+0000.056 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.056 (0) Creation of backups of directories: beginning
+0000.057 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0000.223 (0) Total entities for the zip file: 1604 directories, 8571 files (0 skipped as non-modified), 101.4 MB
+0000.226 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.227 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.229 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.230 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.231 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.232 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0000.233 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0000.235 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0000.236 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0000.237 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0000.237 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (22.3 MB, 8571 files batched, 1001 (1001) added so far); re-opening (prior size: 0 KB)
+0000.599 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: size is now: 9.20 MB
+0000.601 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1100 files added (on-disk size: 9456.6 KB)
+0000.603 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1200 files added (on-disk size: 9456.6 KB)
+0000.604 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1300 files added (on-disk size: 9456.6 KB)
+0000.605 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1400 files added (on-disk size: 9456.6 KB)
+0000.607 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1500 files added (on-disk size: 9456.6 KB)
+0000.608 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1600 files added (on-disk size: 9456.6 KB)
+0000.609 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1700 files added (on-disk size: 9456.6 KB)
+0000.610 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1800 files added (on-disk size: 9456.6 KB)
+0000.611 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 1900 files added (on-disk size: 9456.6 KB)
+0000.612 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2000 files added (on-disk size: 9456.6 KB)
+0000.613 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (8.1 MB, 8571 files batched, 1001 (2002) added so far); re-opening (prior size: 9456.6 KB)
+0000.826 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: size is now: 12.60 MB
+0000.828 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2100 files added (on-disk size: 12907.1 KB)
+0000.829 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2200 files added (on-disk size: 12907.1 KB)
+0000.830 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2300 files added (on-disk size: 12907.1 KB)
+0000.831 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2400 files added (on-disk size: 12907.1 KB)
+0000.832 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2500 files added (on-disk size: 12907.1 KB)
+0000.833 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2600 files added (on-disk size: 12907.1 KB)
+0000.834 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2700 files added (on-disk size: 12907.1 KB)
+0000.836 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2800 files added (on-disk size: 12907.1 KB)
+0000.837 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 2900 files added (on-disk size: 12907.1 KB)
+0000.838 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3000 files added (on-disk size: 12907.1 KB)
+0000.838 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (8.8 MB, 8571 files batched, 1001 (3003) added so far); re-opening (prior size: 12907.1 KB)
+0001.037 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: size is now: 16.20 MB
+0001.040 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3100 files added (on-disk size: 16562.1 KB)
+0001.041 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3200 files added (on-disk size: 16562.1 KB)
+0001.042 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3300 files added (on-disk size: 16562.1 KB)
+0001.044 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3400 files added (on-disk size: 16562.1 KB)
+0001.045 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3500 files added (on-disk size: 16562.1 KB)
+0001.046 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3600 files added (on-disk size: 16562.1 KB)
+0001.047 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3700 files added (on-disk size: 16562.1 KB)
+0001.048 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3800 files added (on-disk size: 16562.1 KB)
+0001.049 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 3900 files added (on-disk size: 16562.1 KB)
+0001.051 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4000 files added (on-disk size: 16562.1 KB)
+0001.051 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (22.7 MB, 8571 files batched, 1001 (4004) added so far); re-opening (prior size: 16562.1 KB)
+0001.548 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: size is now: 22.80 MB
+0001.550 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4100 files added (on-disk size: 23342 KB)
+0001.551 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4200 files added (on-disk size: 23342 KB)
+0001.553 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4300 files added (on-disk size: 23342 KB)
+0001.554 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4400 files added (on-disk size: 23342 KB)
+0001.555 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4500 files added (on-disk size: 23342 KB)
+0001.557 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4600 files added (on-disk size: 23342 KB)
+0001.558 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4700 files added (on-disk size: 23342 KB)
+0001.559 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4800 files added (on-disk size: 23342 KB)
+0001.560 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 4900 files added (on-disk size: 23342 KB)
+0001.561 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5000 files added (on-disk size: 23342 KB)
+0001.562 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (9.2 MB, 8571 files batched, 1001 (5005) added so far); re-opening (prior size: 23342 KB)
+0001.818 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5100 files added (on-disk size: 26504.1 KB)
+0001.819 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5200 files added (on-disk size: 26504.1 KB)
+0001.820 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5300 files added (on-disk size: 26504.1 KB)
+0001.822 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5400 files added (on-disk size: 26504.1 KB)
+0001.823 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5500 files added (on-disk size: 26504.1 KB)
+0001.824 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5600 files added (on-disk size: 26504.1 KB)
+0001.825 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5700 files added (on-disk size: 26504.1 KB)
+0001.826 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5800 files added (on-disk size: 26504.1 KB)
+0001.828 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 5900 files added (on-disk size: 26504.1 KB)
+0001.829 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6000 files added (on-disk size: 26504.1 KB)
+0001.829 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (10.3 MB, 8571 files batched, 1001 (6006) added so far); re-opening (prior size: 26504.1 KB)
+0002.079 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6100 files added (on-disk size: 29574.1 KB)
+0002.080 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6200 files added (on-disk size: 29574.1 KB)
+0002.081 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6300 files added (on-disk size: 29574.1 KB)
+0002.083 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6400 files added (on-disk size: 29574.1 KB)
+0002.084 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6500 files added (on-disk size: 29574.1 KB)
+0002.085 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6600 files added (on-disk size: 29574.1 KB)
+0002.087 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6700 files added (on-disk size: 29574.1 KB)
+0002.088 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6800 files added (on-disk size: 29574.1 KB)
+0002.089 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 6900 files added (on-disk size: 29574.1 KB)
+0002.090 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7000 files added (on-disk size: 29574.1 KB)
+0002.090 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (5.8 MB, 8571 files batched, 1001 (7007) added so far); re-opening (prior size: 29574.1 KB)
+0002.242 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7100 files added (on-disk size: 32825.2 KB)
+0002.243 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7200 files added (on-disk size: 32825.2 KB)
+0002.244 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7300 files added (on-disk size: 32825.2 KB)
+0002.246 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7400 files added (on-disk size: 32825.2 KB)
+0002.247 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7500 files added (on-disk size: 32825.2 KB)
+0002.248 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7600 files added (on-disk size: 32825.2 KB)
+0002.250 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7700 files added (on-disk size: 32825.2 KB)
+0002.251 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7800 files added (on-disk size: 32825.2 KB)
+0002.252 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 7900 files added (on-disk size: 32825.2 KB)
+0002.253 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8000 files added (on-disk size: 32825.2 KB)
+0002.253 (0) Adding batch to zip file (UpdraftPlus_BinZip): over 1000 files added on this batch (11.1 MB, 8571 files batched, 1001 (8008) added so far); re-opening (prior size: 32825.2 KB)
+0002.526 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8100 files added (on-disk size: 36469.5 KB)
+0002.527 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8200 files added (on-disk size: 36469.5 KB)
+0002.529 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8300 files added (on-disk size: 36469.5 KB)
+0002.530 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8400 files added (on-disk size: 36469.5 KB)
+0002.531 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.tmp: 8500 files added (on-disk size: 36469.5 KB)
+0002.670 (0) Creating zip file manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.list-temp.tmp)
+0002.682 (0) Successfully created zip file manifest (size: 768467)
+0002.866 (0) Created plugins zip (0) - 37833.2 KB in 2.8 s (13474.4 KB/s) (sha1: 580a7a1a07bf2db3de2a8ef6885e1fe7dd2c348f, sha256: c0e260e285b0ebcc47814e3f6ebf111843cd46e16ead1eb55d85a450507e0697)
+0002.870 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0002.870 (0) No remote despatch: user chose no remote backup service
+0002.871 (0) Recording as successfully uploaded: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip
+0002.871 (0) Deleting zip manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip.list.tmp)
+0002.872 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0002.872 (0) Number of backup sets in history: 0; groups (db): 1
+0002.873 (0) Number of backup sets in history: 0; groups (files): 1
+0002.873 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0002.874 (0) Beginning creation of dump of themes (split every: 400 MB)
+0002.883 (0) Total entities for the zip file: 48 directories, 325 files (0 skipped as non-modified), 12.6 MB
+0002.884 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0002.885 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0002.887 (0) Zip: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0003.119 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.tmp: size is now: 11.40 MB
+0003.122 (0) Creating zip file manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.list-temp.tmp)
+0003.122 (0) Successfully created zip file manifest (size: 22215)
+0003.181 (0) Created themes zip (0) - 11630 KB in 0.3 s (38022.7 KB/s) (sha1: b87acefb4296f57780f3cf16208f69c27b2d82cf, sha256: 7240d31247060a395440275c9f9c85d3197a2d7f3c0e4e57ab0c9135e58319b7)
+0003.183 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.183 (0) No remote despatch: user chose no remote backup service
+0003.183 (0) Recording as successfully uploaded: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip
+0003.184 (0) Deleting zip manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip.list.tmp)
+0003.185 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0003.185 (0) Number of backup sets in history: 0; groups (db): 1
+0003.185 (0) Number of backup sets in history: 0; groups (files): 1
+0003.185 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0003.187 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0003.187 (0) Looking for candidates to backup in: /Users/olha1/Local Sites/olhas/app/public/wp-content/uploads
+0003.187 (0) finding files: 2024: adding to list (1)
+0003.187 (0) finding files: wpo-plugins-tables-list.json: adding to list (2)
+0003.187 (0) finding files: wpo: adding to list (3)
+0003.187 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0003.188 (0) Total entities for the zip file: 4 directories, 1 files (0 skipped as non-modified), 0.9 MB
+0003.224 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-uploads.zip.tmp: size is now: 0.20 MB
+0003.225 (0) Creating zip file manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-uploads.zip.list-temp.tmp)
+0003.225 (0) Successfully created zip file manifest (size: 75)
+0003.227 (0) Created uploads zip (0) - 197.2 KB in 0 s (5049.1 KB/s) (sha1: 6769b25768057086f121e6de230e1be2423c4076, sha256: 5ca52346cb6b6437b8bcb4268f0248138ef228a6d4d723cce5c38ea8c5430dcf)
+0003.228 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.228 (0) No remote despatch: user chose no remote backup service
+0003.229 (0) Recording as successfully uploaded: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-uploads.zip
+0003.229 (0) Deleting zip manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-uploads.zip.list.tmp)
+0003.230 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0003.230 (0) Number of backup sets in history: 0; groups (db): 1
+0003.230 (0) Number of backup sets in history: 0; groups (files): 1
+0003.230 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0003.231 (0) No backup of mu-plugins: excluded by user's options
+0003.232 (0) Beginning backup of other directories found in the content directory (index: 0)
+0003.232 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0003.232 (0) Looking for candidates to backup in: /Users/olha1/Local Sites/olhas/app/public/wp-content
+0003.233 (0) finding files: upgrade: skipping: excluded by options
+0003.233 (0) finding files: .DS_Store: adding to list (1)
+0003.233 (0) finding files: index.php: adding to list (2)
+0003.233 (0) finding files: plugins: skipping: this is the plugins directory
+0003.233 (0) finding files: uploads: skipping: this is the uploads directory
+0003.234 (0) finding files: updraft: skipping: this is the updraft directory
+0003.234 (0) finding files: advanced-cache.php: adding to list (3)
+0003.234 (0) finding files: themes: skipping: this is the themes directory
+0003.234 (0) finding files: mu-plugins: skipping: this is the mu-plugins directory
+0003.235 (0) Total entities for the zip file: 0 directories, 3 files (0 skipped as non-modified), 0 MB
+0003.255 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-others.zip.tmp: size is now: 0.00 MB
+0003.256 (0) Creating zip file manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-others.zip.list-temp.tmp)
+0003.256 (0) Successfully created zip file manifest (size: 87)
+0003.257 (0) Created others zip (0) - 1.3 KB in 0 s (57.5 KB/s) (sha1: 3d36dabbc12ed2a0e8f1a723c8115380e613b4f7, sha256: df167e0bd25bdaf7cbbba0b76ad2f4ed42112fe888f515f565b7ed878d92614a)
+0003.258 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.259 (0) No remote despatch: user chose no remote backup service
+0003.259 (0) Recording as successfully uploaded: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-others.zip
+0003.259 (0) Deleting zip manifest (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-others.zip.list.tmp)
+0003.260 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0003.261 (0) Number of backup sets in history: 0; groups (db): 1
+0003.261 (0) Number of backup sets in history: 0; groups (files): 1
+0003.261 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0003.263 (0) Saving backup status to database (elements: 8)
+0003.263 (0) Beginning creation of database dump (WordPress DB)
+0003.264 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0003.268 (0) Table wp_options: Total expected rows (via COUNT): 254
+0003.269 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.309 (0) Table wp_options: Rows added in this batch (next record: 269): 250 (uncompressed bytes in this segment=1701556) in 0.04 seconds
+0003.311 (0) Table wp_options: finishing file(s) (2, 475.1 KB)
+0003.313 (0) Table wp_users: Total expected rows (via COUNT): 1
+0003.313 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.314 (0) Table wp_users: Rows added in this batch (next record: 5): 1 (uncompressed bytes in this segment=1529) in 0.00 seconds
+0003.315 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0003.316 (0) Table wp_usermeta: Total expected rows (via COUNT): 19
+0003.317 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.317 (0) Table wp_usermeta: Rows added in this batch (next record: 103): 19 (uncompressed bytes in this segment=2921) in 0.00 seconds
+0003.319 (0) Table wp_usermeta: finishing file(s) (2, 1.5 KB)
+0003.321 (0) Table wp_actionscheduler_actions: Total expected rows (via COUNT): 13
+0003.321 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.321 (0) Table wp_actionscheduler_actions: Rows added in this batch (next record: 116): 13 (uncompressed bytes in this segment=7537) in 0.00 seconds
+0003.323 (0) Table wp_actionscheduler_actions: finishing file(s) (2, 1.4 KB)
+0003.324 (0) Table wp_actionscheduler_claims: Total expected rows (via COUNT): 0
+0003.325 (0) Table wp_actionscheduler_claims: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=625) in 0.00 seconds
+0003.326 (0) Table wp_actionscheduler_claims: finishing file(s) (2, 0.4 KB)
+0003.327 (0) Table wp_actionscheduler_groups: Total expected rows (via COUNT): 3
+0003.328 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.328 (0) Table wp_actionscheduler_groups: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=750) in 0.00 seconds
+0003.329 (0) Table wp_actionscheduler_groups: finishing file(s) (2, 0.4 KB)
+0003.331 (0) Table wp_actionscheduler_logs: Total expected rows (via COUNT): 27
+0003.331 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.332 (0) Table wp_actionscheduler_logs: Rows added in this batch (next record: 27): 27 (uncompressed bytes in this segment=3226) in 0.00 seconds
+0003.333 (0) Table wp_actionscheduler_logs: finishing file(s) (2, 0.9 KB)
+0003.335 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0003.335 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=729) in 0.00 seconds
+0003.337 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0003.338 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0003.338 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.339 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=2327) in 0.00 seconds
+0003.340 (0) Table wp_comments: finishing file(s) (2, 0.8 KB)
+0003.341 (0) Table wp_links: Total expected rows (via COUNT): 0
+0003.342 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1508) in 0.00 seconds
+0003.343 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0003.345 (0) Table wp_postmeta: Total expected rows (via COUNT): 21
+0003.345 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.346 (0) Table wp_postmeta: Rows added in this batch (next record: 21): 21 (uncompressed bytes in this segment=1763) in 0.00 seconds
+0003.347 (0) Table wp_postmeta: finishing file(s) (2, 0.7 KB)
+0003.349 (0) Table wp_posts: Total expected rows (via COUNT): 8
+0003.350 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.350 (0) Table wp_posts: Rows added in this batch (next record: 8): 8 (uncompressed bytes in this segment=11388) in 0.00 seconds
+0003.352 (0) Table wp_posts: finishing file(s) (2, 3.2 KB)
+0003.353 (0) Table wp_term_relationships: Total expected rows (approximate): 4
+0003.354 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 4 (uncompressed bytes in this segment=738) in 0.00 seconds
+0003.355 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0003.356 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 1
+0003.357 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.357 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=970) in 0.00 seconds
+0003.359 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0003.360 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0003.361 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=702) in 0.00 seconds
+0003.362 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0003.364 (0) Table wp_terms: Total expected rows (via COUNT): 1
+0003.364 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.364 (0) Table wp_terms: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=780) in 0.00 seconds
+0003.366 (0) Table wp_terms: finishing file(s) (2, 0.4 KB)
+0003.367 (0) Table wp_tm_taskmeta: Total expected rows (via COUNT): 0
+0003.368 (0) Table wp_tm_taskmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=702) in 0.00 seconds
+0003.370 (0) Table wp_tm_taskmeta: finishing file(s) (2, 0.4 KB)
+0003.371 (0) Table wp_tm_tasks: Total expected rows (via COUNT): 0
+0003.372 (0) Table wp_tm_tasks: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=964) in 0.00 seconds
+0003.373 (0) Table wp_tm_tasks: finishing file(s) (2, 0.5 KB)
+0003.375 (0) Table wp_wpforms_logs: Total expected rows (via COUNT): 0
+0003.375 (0) Table wp_wpforms_logs: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=818) in 0.00 seconds
+0003.377 (0) Table wp_wpforms_logs: finishing file(s) (2, 0.4 KB)
+0003.378 (0) Table wp_wpforms_payment_meta: Total expected rows (via COUNT): 0
+0003.379 (0) Table wp_wpforms_payment_meta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=783) in 0.00 seconds
+0003.381 (0) Table wp_wpforms_payment_meta: finishing file(s) (2, 0.4 KB)
+0003.382 (0) Table wp_wpforms_payments: Total expected rows (via COUNT): 0
+0003.383 (0) Table wp_wpforms_payments: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=2190) in 0.00 seconds
+0003.384 (0) Table wp_wpforms_payments: finishing file(s) (2, 0.6 KB)
+0003.386 (0) Table wp_wpforms_tasks_meta: Total expected rows (via COUNT): 2
+0003.386 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.386 (0) Table wp_wpforms_tasks_meta: Rows added in this batch (next record: 3): 2 (uncompressed bytes in this segment=858) in 0.00 seconds
+0003.388 (0) Table wp_wpforms_tasks_meta: finishing file(s) (2, 0.5 KB)
+0003.389 (0) Table wp_wpmailsmtp_debug_events: Total expected rows (via COUNT): 7
+0003.389 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.390 (0) Table wp_wpmailsmtp_debug_events: Rows added in this batch (next record: 7): 7 (uncompressed bytes in this segment=8175) in 0.00 seconds
+0003.391 (0) Table wp_wpmailsmtp_debug_events: finishing file(s) (2, 1.1 KB)
+0003.393 (0) Table wp_wpmailsmtp_tasks_meta: Total expected rows (via COUNT): 1
+0003.393 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.393 (0) Table wp_wpmailsmtp_tasks_meta: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=810) in 0.00 seconds
+0003.395 (0) Table wp_wpmailsmtp_tasks_meta: finishing file(s) (2, 0.4 KB)
+0003.396 (0) Table wp_wpml_mails: Total expected rows (via COUNT): 9
+0003.396 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.397 (0) Table wp_wpml_mails: Rows added in this batch (next record: 19): 9 (uncompressed bytes in this segment=6187) in 0.00 seconds
+0003.398 (0) Table wp_wpml_mails: finishing file(s) (2, 1.7 KB)
+0003.400 (0) Table wp_wt_iew_action_history: Total expected rows (via COUNT): 2
+0003.400 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.400 (0) Table wp_wt_iew_action_history: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=1956) in 0.00 seconds
+0003.402 (0) Table wp_wt_iew_action_history: finishing file(s) (2, 0.7 KB)
+0003.404 (0) Table wp_wt_iew_mapping_template: Total expected rows (via COUNT): 0
+0003.404 (0) Table wp_wt_iew_mapping_template: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=830) in 0.00 seconds
+0003.406 (0) Table wp_wt_iew_mapping_template: finishing file(s) (2, 0.4 KB)
+0003.408 (0) Table wp_yoast_indexable: Total expected rows (via COUNT): 0
+0003.408 (0) Table wp_yoast_indexable: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=4413) in 0.00 seconds
+0003.409 (0) Table wp_yoast_indexable: finishing file(s) (2, 1 KB)
+0003.411 (0) Table wp_yoast_indexable_hierarchy: Total expected rows (approximate): 0
+0003.411 (0) Table wp_yoast_indexable_hierarchy: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=750) in 0.00 seconds
+0003.412 (0) Table wp_yoast_indexable_hierarchy: finishing file(s) (2, 0.4 KB)
+0003.413 (0) Table wp_yoast_migrations: Total expected rows (via COUNT): 24
+0003.413 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0003.414 (0) Table wp_yoast_migrations: Rows added in this batch (next record: 24): 24 (uncompressed bytes in this segment=1287) in 0.00 seconds
+0003.415 (0) Table wp_yoast_migrations: finishing file(s) (2, 0.6 KB)
+0003.416 (0) Table wp_yoast_primary_term: Total expected rows (via COUNT): 0
+0003.417 (0) Table wp_yoast_primary_term: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=880) in 0.00 seconds
+0003.418 (0) Table wp_yoast_primary_term: finishing file(s) (2, 0.5 KB)
+0003.420 (0) Table wp_yoast_seo_links: Total expected rows (via COUNT): 0
+0003.420 (0) Table wp_yoast_seo_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=981) in 0.00 seconds
+0003.421 (0) Table wp_yoast_seo_links: finishing file(s) (2, 0.4 KB)
+0003.421 (0) PHP event: code E_WARNING: filemtime(): stat failed for /Users/olha1/Local Sites/olhas/app/public/wp-content/updraft/backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db.gz (line 1925, wp-content/plugins/updraftplus/backup.php)
+0003.422 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_options.table.tmpr270.gz (1/32/fopen): adding to final database dump
+0003.425 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_options.table.gz (2/32/fopen): adding to final database dump
+0003.425 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_users.table.tmpr6.gz (3/32/fopen): adding to final database dump
+0003.425 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_users.table.gz (4/32/fopen): adding to final database dump
+0003.425 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_usermeta.table.tmpr104.gz (5/32/fopen): adding to final database dump
+0003.426 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_usermeta.table.gz (6/32/fopen): adding to final database dump
+0003.426 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_actions.table.tmpr117.gz (7/32/fopen): adding to final database dump
+0003.426 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_actions.table.gz (8/32/fopen): adding to final database dump
+0003.426 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_claims.table.tmpr0.gz (9/32/fopen): adding to final database dump
+0003.427 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_claims.table.gz (10/32/fopen): adding to final database dump
+0003.427 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_groups.table.tmpr4.gz (11/32/fopen): adding to final database dump
+0003.427 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_groups.table.gz (12/32/fopen): adding to final database dump
+0003.427 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_logs.table.tmpr28.gz (13/32/fopen): adding to final database dump
+0003.427 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_actionscheduler_logs.table.gz (14/32/fopen): adding to final database dump
+0003.428 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_commentmeta.table.tmpr0.gz (15/32/fopen): adding to final database dump
+0003.428 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_commentmeta.table.gz (16/32/fopen): adding to final database dump
+0003.428 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_comments.table.tmpr2.gz (17/32/fopen): adding to final database dump
+0003.428 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_comments.table.gz (18/32/fopen): adding to final database dump
+0003.428 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_links.table.tmpr0.gz (19/32/fopen): adding to final database dump
+0003.429 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_links.table.gz (20/32/fopen): adding to final database dump
+0003.429 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_postmeta.table.tmpr22.gz (21/32/fopen): adding to final database dump
+0003.429 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_postmeta.table.gz (22/32/fopen): adding to final database dump
+0003.429 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_posts.table.tmpr9.gz (23/32/fopen): adding to final database dump
+0003.429 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_posts.table.gz (24/32/fopen): adding to final database dump
+0003.430 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_term_relationships.table.tmpr100001.gz (25/32/fopen): adding to final database dump
+0003.430 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_term_relationships.table.gz (26/32/fopen): adding to final database dump
+0003.430 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_term_taxonomy.table.tmpr2.gz (27/32/fopen): adding to final database dump
+0003.430 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_term_taxonomy.table.gz (28/32/fopen): adding to final database dump
+0003.430 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_termmeta.table.tmpr0.gz (29/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_termmeta.table.gz (30/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_terms.table.tmpr2.gz (31/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_terms.table.gz (32/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_tm_taskmeta.table.tmpr0.gz (33/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_tm_taskmeta.table.gz (34/32/fopen): adding to final database dump
+0003.431 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_tm_tasks.table.tmpr0.gz (35/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_tm_tasks.table.gz (36/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_logs.table.tmpr0.gz (37/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_logs.table.gz (38/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_payment_meta.table.tmpr0.gz (39/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_payment_meta.table.gz (40/32/fopen): adding to final database dump
+0003.432 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_payments.table.tmpr0.gz (41/32/fopen): adding to final database dump
+0003.433 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_payments.table.gz (42/32/fopen): adding to final database dump
+0003.433 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_tasks_meta.table.tmpr4.gz (43/32/fopen): adding to final database dump
+0003.433 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpforms_tasks_meta.table.gz (44/32/fopen): adding to final database dump
+0003.433 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpmailsmtp_debug_events.table.tmpr8.gz (45/32/fopen): adding to final database dump
+0003.433 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpmailsmtp_debug_events.table.gz (46/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpmailsmtp_tasks_meta.table.tmpr2.gz (47/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpmailsmtp_tasks_meta.table.gz (48/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpml_mails.table.tmpr20.gz (49/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wpml_mails.table.gz (50/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wt_iew_action_history.table.tmpr3.gz (51/32/fopen): adding to final database dump
+0003.434 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wt_iew_action_history.table.gz (52/32/fopen): adding to final database dump
+0003.435 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wt_iew_mapping_template.table.tmpr0.gz (53/32/fopen): adding to final database dump
+0003.435 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_wt_iew_mapping_template.table.gz (54/32/fopen): adding to final database dump
+0003.435 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_indexable.table.tmpr0.gz (55/32/fopen): adding to final database dump
+0003.435 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_indexable.table.gz (56/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_indexable_hierarchy.table.tmpr1.gz (57/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_indexable_hierarchy.table.gz (58/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_migrations.table.tmpr25.gz (59/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_migrations.table.gz (60/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_primary_term.table.tmpr0.gz (61/32/fopen): adding to final database dump
+0003.436 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_primary_term.table.gz (62/32/fopen): adding to final database dump
+0003.437 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_seo_links.table.tmpr0.gz (63/32/fopen): adding to final database dump
+0003.437 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db-table-wp_yoast_seo_links.table.gz (64/32/fopen): adding to final database dump
+0003.440 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db.gz: finished writing out complete database file (497.2 KB)
+0003.462 (0) Total database tables backed up: 32 (backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db.gz, size: 509263, sha1: e80570df8096e0dd32afa2f7907f2106f0d2b264, sha256: 5727b14befd7526b1381fca5a303eb9dce7fef877d30623f3bd6615a55694abf)
+0003.463 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-plugins.zip: plugins: This file has already been successfully uploaded
+0003.463 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-themes.zip: themes: This file has already been successfully uploaded
+0003.463 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-uploads.zip: uploads: This file has already been successfully uploaded
+0003.464 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-others.zip: others: This file has already been successfully uploaded
+0003.464 (0) backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db.gz: db: This file has not yet been successfully uploaded: will queue
+0003.464 (0) Saving backup history. Total backup size: 49 MB
+0003.464 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0003.465 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0003.466 (0) No remote despatch: user chose no remote backup service
+0003.466 (0) Recording as successfully uploaded: backup_2024-08-07-1912_Olhas_wp_new_81840623446a-db.gz
+0003.467 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0003.467 (0) Number of backup sets in history: 1; groups (db): 1
+0003.467 (0) Examining (for databases) backup set with group_id=0, nonce=81840623446a, datestamp=1723057948 (Aug 07 2024 19:12:28)
+0003.467 (0) This backup set is the backup set just made, so will not be deleted.
+0003.467 (0) Number of backup sets in history: 1; groups (files): 1
+0003.467 (0) Examining (for files) backup set with nonce=81840623446a, datestamp=1723057948 (Aug 07 2024 19:12:28)
+0003.467 (0) This backup set is the backup set just made, so will not be deleted.
+0003.467 (0) This backup set is the backup set just made, so will not be deleted.
+0003.467 (0) This backup set is the backup set just made, so will not be deleted.
+0003.468 (0) This backup set is the backup set just made, so will not be deleted.
+0003.468 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0003.468 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0003.468 (0) Resume backup (81840623446a, 0): finish run
+0003.469 (0) Decremented the semaphore (fd) by 1
+0003.469 (0) Semaphore (fd) unlocked
+0003.469 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0003.470 (0) No email will/can be sent - the user has not configured an email address.
+0003.471 (0) The backup succeeded and is now complete
