@@ -116,6 +116,79 @@ function check_image_sizes() {
 
 
 
+function mynewtheme_customize_register($wp_customize) {
+    // Add a new section for the hero image
+    $wp_customize->add_section('hero_section', array(
+        'title'    => __('Hero Section', 'mytheme'),
+        'priority' => 30,
+    ));
+
+    // Add setting for Hero Background Image
+    $wp_customize->add_setting('hero_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image', array(
+        'label'    => __('Hero Background Image', 'mytheme'),
+        'section'  => 'hero_section',
+        'settings' => 'hero_image',
+    )));
+
+    // Add setting for Hero Title
+    $wp_customize->add_setting('hero_title', array(
+        'default'   => 'Welcome to Best Coffee Place',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('hero_title', array(
+        'label'    => __('Hero Title', 'mytheme'),
+        'section'  => 'hero_section',
+        'type'     => 'text',
+    ));
+
+    // Add setting for Hero Description
+    $wp_customize->add_setting('hero_description', array(
+        'default'   => 'Coffee is like a warm hug in a cup, offering a comforting boost of energy to kickstart the day.',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('hero_description', array(
+        'label'    => __('Hero Description', 'mytheme'),
+        'section'  => 'hero_section',
+        'type'     => 'textarea',
+    ));
+
+    // Add setting for Hero Button Text
+    $wp_customize->add_setting('hero_button_text', array(
+        'default'   => 'Learn More',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('hero_button_text', array(
+        'label'    => __('Hero Button Text', 'mytheme'),
+        'section'  => 'hero_section',
+        'type'     => 'text',
+    ));
+
+    // Add setting for Hero Button URL
+    $wp_customize->add_setting('hero_button_url', array(
+        'default'   => home_url('/about'),
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('hero_button_url', array(
+        'label'    => __('Hero Button URL', 'mytheme'),
+        'section'  => 'hero_section',
+        'type'     => 'url',
+    ));
+}
+add_action('customize_register', 'mynewtheme_customize_register');
+
+
+
+
+
 
 ?>
 

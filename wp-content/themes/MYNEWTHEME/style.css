@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.1
+Version: 1.2
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -827,7 +827,7 @@ div.comment:first-of-type {
 
 /* Optional: Add a hover effect for better interaction */
 .menu li a:hover {
-    background-color: #005177; /* Darker background on hover */
+    background-color: rgba(131, 90, 65, 0.29); /* Darker background on hover */
     color: #fff; /* Text color on hover */
 }
 
@@ -837,4 +837,232 @@ padding: 10px;
     border-radius: 25px;
     display: inline-block;
     background-color: rgba(158, 227, 191, 0.68);
+}
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('/'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as needed */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #005bb5;
+}
+
+/* Featured Posts Slider */
+.featured-posts {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.featured-posts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 1 0 300px; /* Adjust size as needed */
+    margin: 10px;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.slide h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Latest Posts */
+.latest-posts {
+    padding: 40px 20px;
+}
+
+.latest-posts h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.latest-posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.latest-posts li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.latest-posts img {
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.latest-posts h3 {
+    margin: 0;
+}
+
+.latest-posts p {
+    margin: 5px 0 0;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-slider {
+    display: flex;
+    overflow: auto;
+}
+
+.testimonial {
+    flex: 1 0 300px; /* Adjust size as needed */
+    margin: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial blockquote {
+    margin: 0;
+    font-style: italic;
+}
+
+.testimonial footer {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.site-footer .footer-widgets {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h2, .social-media h2 {
+    margin-top: 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.social-media a:hover {
+    color: #0073e6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .slider, .testimonial-slider {
+        flex-direction: column;
+    }
+
+    .slide, .testimonial {
+        flex: 1 0 auto;
+        margin: 10px 0;
+    }
+
+    .site-footer .footer-widgets {
+        flex-direction: column;
+    }
+
+    .social-media {
+        text-align: center;
+    }
 }
