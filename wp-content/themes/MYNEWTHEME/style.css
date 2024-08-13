@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.2
+Version: 1.3
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1065,4 +1065,48 @@ a:hover {
     .social-media {
         text-align: center;
     }
+}
+
+
+/* General form styling */
+.wpcf7-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wpcf7-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form input[type="date"],
+.wpcf7-form input[type="number"],
+.wpcf7-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.wpcf7-form input[type="submit"] {
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.wpcf7-form input[type="submit"]:hover {
+    background-color: #005bb5;
 }
