@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.0
+Version: 1.1
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -33,7 +33,7 @@ Author: Olha
     --light: #c2c2c2;
     --lightgray: #eeeeee;
     --dark: #434242;
-    --site-header: #000;;
+    --site-header: #000;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
