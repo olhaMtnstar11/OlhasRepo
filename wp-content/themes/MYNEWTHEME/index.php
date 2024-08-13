@@ -3,25 +3,36 @@
 get_header();
 ?>
 
+<div class="label-component" >
+    index php
+</div>
 
 <article class="content px-3 py-5 p-md-5">
-
-
-
     <?php
-    if( have_posts() ){
+    if( have_posts() ) {
         while( have_posts() ){
             the_post();
             get_template_part('template-parts/content', 'archive');
         }
+    } else {
+        // If no posts are found, display a message
+        echo '<p>No posts found.</p>';
     }
+
     ?>
     <?php
-
+    // Display pagination if there are multiple pages
     the_posts_pagination();
-
     ?>
+
+
 </article>
+
+
+
+
+
+
 
 
 <?php

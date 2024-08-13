@@ -18,6 +18,7 @@ Author: Olha
     --orange: #f68e62;
     --yellow: #ffc107;
     --green: #28a745;
+    --themedark: #2f1507;
     --teal: #20c997;
     --cyan: #17a2b8;
     --white: #fff;
@@ -32,6 +33,7 @@ Author: Olha
     --light: #c2c2c2;
     --lightgray: #eeeeee;
     --dark: #434242;
+    --site-header: #000;;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -55,11 +57,23 @@ Author: Olha
 
 html {
     line-height: 1.15;
+    margin-top: 0px; /* Adjust based on your header height */
 }
+
 body {
     color: var(--secondary);
-    overflow-x: hidden
+    overflow-x: hidden;
+    margin-top: 0px; /* Adjust based on your header height */
 }
+
+
+
+html, body {
+    height: 100%;
+}
+
+
+
 a{
     color: var(--pink);
 }
@@ -105,72 +119,10 @@ h6 {
     background: var(--dark) !important
 }
 
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: var(--sidebar-width);
-    background: var(--primary);
-    color: #fff
-}
-.header .site-title {
-    color:var(--white);
-    font-size:1.2em;
-    display:block;
-}
 
-.header .btn-primary {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: transparent;
-    font-size: 1rem;
-    padding-top: 0.5rem
-}
 
-.header .btn-primary:hover {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: transparent
-}
 
-.header .navbar {
-    padding: 2rem 1rem
-}
 
-.header .navbar-dark .navbar-toggler {
-    border: none;
-    padding: .25rem .6rem
-}
-
-.header .navbar-dark .navbar-toggler:hover {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1
-}
-
-.header .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(256,256,256, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
-
-.header .nav-item {
-    font-weight: bold
-}
-
-.header .nav-item.active a {
-    color: rgba(0, 0, 0, 0.5)
-}
-
-.header .nav-item.active a:hover {
-    text-decoration: none
-}
-
-.header .nav-item a {
-    color: rgba(255, 255, 255, 0.8)
-}
-
-.header .nav-item a:hover {
-    text-decoration: underline;
-    color: rgba(0, 0, 0, 0.6)
-}
 .logo{
     width:78px;
 }
@@ -191,10 +143,18 @@ h6 {
 }
 
 .main-wrapper {
-    margin-left: var(--sidebar-width);
-    background: #fff;
-}
+   /*margin-left: var(--sidebar-width);*/
+    background: #f6fff4;
 
+    display: flex;
+    flex-direction: column;
+
+}
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 .main-wrapper .container {
     max-width: var(--content-max-width);
 }
@@ -224,6 +184,11 @@ h6 {
     background: rgb(43,43,43);
     background: linear-gradient(151deg, var(--orange) 0%, var(--pink) 35%,var(--primary) 100%) !important;
 }
+
+.content {
+    flex: 1;
+}
+
 .content .post .title {
     font-size: 1.275rem
 }
@@ -741,4 +706,135 @@ div.comment:first-of-type {
 .comment-reply-title small a:focus,
 .comment-reply-title small a:hover {
 	text-decoration: underline;
+}
+
+/* General Header Styles */
+.site-header {
+    background-color: var(--site-header); /* Black background */
+    padding: 10px 20px; /* Padding around the header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+
+}
+
+/* Container to align items in the header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* Logo Styles */
+.site-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the logo inside the container */
+    /*  width: 40px;  Set the width (and height if needed) */
+     /*  height: 40px;  Ensure it's a square */
+}
+
+.site-logo img {
+    width: 100%; /* Ensure the image scales to fill the container */
+    height: auto; /* Maintain aspect ratio if the image isn't square */
+    max-width: 100%; /* Prevent overflow */
+    display: block; /* Ensure it's displayed as a block element */
+}
+
+
+
+/* Header Extras (e.g., search form) */
+/* Header Extras (e.g., search form) */
+.header-extras {
+    display: flex;
+    align-items: center;
+}
+
+.header-extras .search-form {
+    margin-left: 20px; /* Spacing for the search form */
+    display: flex;
+    align-items: center;
+}
+
+.header-extras .search-form input[type="search"] {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px; /* Rounded corners for the search input */
+    outline: none;
+    font-size: 12px;
+}
+
+.header-extras .search-form button {
+    background-color: #f2c94c; /* Search button color */
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px; /* Rounded corners */
+    color: #000; /* Text color on the button */
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between input and button */
+}
+
+.header-extras .search-form button:hover {
+    background-color: #e1b700; /* Darker yellow for hover effect */
+}
+
+
+
+
+.main-navigation {
+    background-color: var(--site-header);  /* Background color of the menu */
+}
+
+.main-navigation ul {
+    display: flex; /* Align items in a row */
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul li {
+    margin: 0;
+}
+
+.main-navigation ul li a {
+    display: block;
+    padding: 15px 20px; /* Space around menu items */
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.4s; /* Smooth background color change */
+}
+
+.main-navigation ul li a:hover {
+    text-shadow: 2px 2px 5px white;
+    font-size: 16px;
+    transition: color 0.4s; /* Smooth background color change */
+    /*  background-color: #555;   Background color on hover */
+}
+
+/* Style for the current/active menu item */
+.current-menu-item a {
+    background-color: #0073aa; /* Background color for the active item */
+    color: #fff; /* Text color for the active item */
+    font-weight: bold; /* Optional: make the active item text bold */
+}
+
+/* Optional: Add a hover effect for better interaction */
+.menu li a:hover {
+    background-color: #005177; /* Darker background on hover */
+    color: #fff; /* Text color on hover */
+}
+
+
+.label-component {
+padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+    background-color: rgba(158, 227, 191, 0.68);
 }

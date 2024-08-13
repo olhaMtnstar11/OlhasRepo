@@ -4,6 +4,9 @@ get_header();
 ?>
 
 
+<div class="label-component" >
+    search php
+</div>
 <article class="content px-3 py-5 p-md-5">
 
     <?php

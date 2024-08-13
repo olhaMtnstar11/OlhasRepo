@@ -2,10 +2,10 @@
 <?php
 get_header();
 ?>
-
-
+<div class="label-component" >
+    archive php
+</div>
 <article class="content px-3 py-5 p-md-5">
-
     <?php
     if( have_posts() ){
         while( have_posts() ){
@@ -14,10 +14,7 @@ get_header();
         }
     }
     ?>
-
 </article>
-
-
 <?php
 get_footer();
 ?>

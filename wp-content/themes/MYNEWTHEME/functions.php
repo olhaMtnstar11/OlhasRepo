@@ -6,18 +6,13 @@
 function mynewtheme_menus() {
 
     $locations = array(
-        'primary' => "Dectop Primary Left SideBar",
+        'primary' => "Primary Menu header",
          'footer' => "Footer Menu Items"
     );
 register_nav_menus($locations);
 }
 
-
 add_action( 'init', 'mynewtheme_menus');
-
-
-
-
 
 
  //add dinamic title tag support
@@ -109,6 +104,17 @@ register_sidebar(
 }
 
 add_action( 'widgets_init', 'mynewtheme_widget_areas');
+
+
+/*
+add_action('after_setup_theme', 'check_image_sizes');
+function check_image_sizes() {
+    global $_wp_additional_image_sizes;
+    print_r($_wp_additional_image_sizes);
+}
+ * */
+
+
 
 
 ?>
