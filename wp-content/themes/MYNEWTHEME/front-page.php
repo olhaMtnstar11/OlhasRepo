@@ -29,7 +29,7 @@
         <div class="hero-content">
             <h1><?php echo $hero_title; ?></h1>
             <p><?php echo $hero_description; ?></p>
-            <a href="<?php echo esc_url(home_url('<?php echo esc_url($hero_button_url); ?>')); ?>" class="btn-primary"><?php echo $hero_button_text; ?></a>
+            <a href="<?php echo $hero_button_url; ?>" class="btn-primary"><?php echo $hero_button_text; ?></a>
         </div>
     </section>
 
