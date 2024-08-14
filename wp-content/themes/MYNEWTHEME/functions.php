@@ -151,6 +151,17 @@ function mynewtheme_customize_register($wp_customize) {
         'settings' => 'bg_image_about',
     )));
 
+    // Add setting for bgc of post page
+    $wp_customize->add_setting('bg_image_posts', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bg_image_posts', array(
+        'label'    => __('bg Image for Posts page', 'mytheme'),
+        'section'  => 'bg_page_section',
+        'settings' => 'bg_image_posts',
+    )));
 
 
     // Add a new section for the hero

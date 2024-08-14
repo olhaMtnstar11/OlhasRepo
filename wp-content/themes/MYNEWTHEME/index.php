@@ -3,6 +3,21 @@
 get_header();
 ?>
 
+
+<?php
+// Fetch the hero image URL from the Customizer
+$bg_image = get_theme_mod('bg_image_posts');
+
+?>
+
+
+<style>
+    body {
+        background-image: url('<?php echo esc_url($bg_image); ?>');
+    }
+</style>
+
+
 <div class="label-component" >
     index php
 </div>
