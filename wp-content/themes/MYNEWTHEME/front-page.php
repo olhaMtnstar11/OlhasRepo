@@ -7,6 +7,10 @@
     <?php
     // Fetch the hero image URL from the Customizer
     $hero_image_url = get_theme_mod('hero_image');
+    $hero_title = get_theme_mod('hero_title');
+    $hero_description = get_theme_mod('hero_description');
+    $hero_button_text = get_theme_mod('hero_button_text');
+    $hero_button_url = get_theme_mod('hero_button_url');
     ?>
 
     <style>
@@ -17,18 +21,18 @@
 
 
 
-
     <div class="label-component" >
         front page php
     </div>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Welcome to Coffee Place</h1>
-            <p>Coffee is like a warm hug in a cup, offering a comforting boost of energy to kickstart the day.</p>
-            <a href="<?php echo esc_url(home_url('/about')); ?>" class="btn-primary">Go To ...</a>
+            <h1><?php echo $hero_title; ?></h1>
+            <p><?php echo $hero_description; ?></p>
+            <a href="<?php echo esc_url(home_url('<?php echo esc_url($hero_button_url); ?>')); ?>" class="btn-primary"><?php echo $hero_button_text; ?></a>
         </div>
     </section>
+
     <section class="featured-posts">
         <h2>Featured Posts</h2>
         <div class="slider">
@@ -55,6 +59,7 @@
             <?php endif; ?>
         </div>
     </section>
+
     <section class="about">
         <h2>About Us</h2>
         <div class="about-content">
@@ -62,6 +67,7 @@
             <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn-secondary">Contact Us</a>
         </div>
     </section>
+
     <section class="latest-posts">
         <h2>Latest News</h2>
         <ul>
@@ -90,6 +96,7 @@
             <?php endif; ?>
         </ul>
     </section>
+
     <section class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
@@ -115,7 +122,6 @@
             <?php endif; ?>
         </div>
     </section>
-
 
 		<article class="content px-3 py-5 p-md-5">
 
