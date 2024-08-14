@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.4
+Version: 1.5
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -880,11 +880,13 @@ a:hover {
 .hero h1 {
     font-size: 3em;
     margin: 0;
+    color: #2f1507;
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 10px 0;
+    color: rgba(131, 90, 65, 0.77);
 }
 
 .btn-primary {
