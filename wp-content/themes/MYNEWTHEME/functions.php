@@ -228,6 +228,27 @@ function mynewtheme_customize_register($wp_customize) {
         'section'  => 'hero_section',
         'type'     => 'url',
     ));
+
+
+    // Add a new section for the footer
+    $wp_customize->add_section('footer_section', array(
+        'title'    => __('Footer Section', 'mytheme'),
+        'priority' => 30,
+    ));
+
+    // Add setting for Hero Button Text
+    $wp_customize->add_setting('footer_text', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('footer_text', array(
+        'label'    => __('Footer Text', 'mytheme'),
+        'section'  => 'footer_section',
+        'type'     => 'text',
+    ));
+
+
 }
 add_action('customize_register', 'mynewtheme_customize_register');
 
