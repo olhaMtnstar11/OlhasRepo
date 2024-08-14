@@ -128,18 +128,28 @@ function mynewtheme_customize_register($wp_customize) {
         'priority' => 31,
     ));
     // Add setting for bgc
-    $wp_customize->add_setting('bg_image', array(
+    $wp_customize->add_setting('bg_image_form', array(
         'default'   => '',
         'transport' => 'refresh',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bg_image', array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bg_image_form', array(
         'label'    => __('bg Image for Form page', 'mytheme'),
         'section'  => 'bg_page_section',
-        'settings' => 'bg_image',
+        'settings' => 'bg_image_form',
     )));
 
+    // Add setting for bgc
+    $wp_customize->add_setting('bg_image_about', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
 
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bg_image_about', array(
+        'label'    => __('bg Image for About page', 'mytheme'),
+        'section'  => 'bg_page_section',
+        'settings' => 'bg_image_about',
+    )));
 
 
 

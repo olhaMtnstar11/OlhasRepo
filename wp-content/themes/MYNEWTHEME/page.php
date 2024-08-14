@@ -9,16 +9,18 @@ get_header();
 
 <?php
 // Fetch the hero image URL from the Customizer
-$bg_image = get_theme_mod('bg_image');
-
+$bg_image_f = get_theme_mod('bg_image_form');
+$bg_image_about = get_theme_mod('bg_image_about');
 ?>
 
 
 <style>
     .page-id-11 {
-        background-image: url('<?php echo esc_url($bg_image); ?>');
+        background-image: url('<?php echo esc_url($bg_image_f); ?>');
     }
-
+    .page-id-57 {
+        background-image: url('<?php echo esc_url($bg_image_about); ?>');
+    }
 </style>
 
 
