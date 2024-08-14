@@ -117,12 +117,37 @@ function check_image_sizes() {
 
 
 function mynewtheme_customize_register($wp_customize) {
-    // Add a new section for the hero image
+
+
+
+
+
+    // Add a new section for bg color of some page
+    $wp_customize->add_section('bg_page_section', array(
+        'title'    => __('bg color Section', 'mytheme'),
+        'priority' => 31,
+    ));
+    // Add setting for bgc
+    $wp_customize->add_setting('bg_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'bg_image', array(
+        'label'    => __('bg Image for Form page', 'mytheme'),
+        'section'  => 'bg_page_section',
+        'settings' => 'bg_image',
+    )));
+
+
+
+
+
+    // Add a new section for the hero
     $wp_customize->add_section('hero_section', array(
         'title'    => __('Hero Section', 'mytheme'),
         'priority' => 30,
     ));
-
     // Add setting for Hero Background Image
     $wp_customize->add_setting('hero_image', array(
         'default'   => '',
