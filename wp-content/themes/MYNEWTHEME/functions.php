@@ -238,7 +238,7 @@ function mynewtheme_customize_register($wp_customize) {
 
     // Add setting for Hero Button Text
     $wp_customize->add_setting('footer_text', array(
-        'default'   => '',
+        'default'   => 'Here have to be footer text !',
         'transport' => 'refresh',
     ));
 
