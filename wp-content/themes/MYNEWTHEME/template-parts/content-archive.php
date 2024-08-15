@@ -12,7 +12,7 @@
                 <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="<?php echo $itemImg; ?>" alt="<?php the_title_attribute(); ?>">
             <?php else: ?>
                 <!-- Fallback for posts without thumbnails -->
-                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="<?php echo esc_url(get_template_directory_uri() . '/path/to/default-image.jpg'); ?>" alt="Default Image">
+                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="http://olhasite.wpenginepowered.com/wp-content/uploads/2024/08/coffee-5009730_1280.webp" alt="Default Image">
             <?php endif; ?>
             <div class="media-body">
                 <h3 class="title mb-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
