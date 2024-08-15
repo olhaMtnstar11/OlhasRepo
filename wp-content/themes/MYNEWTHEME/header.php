@@ -36,14 +36,16 @@ wp_head();
             <?php } ?>
         </div>
 
+
         <!-- Navigation -->
         <nav class="main-navigation">
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary', // This should match the location set in the menu settings
-                'container' => false,          // Remove the container element
+                'container_class' => 'primary-navigation',
+                'container' => 'nav',
                 'menu_class' => 'menu',        // Custom class for the menu
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', // Output the menu as a list
+
             ));
             ?>
         </nav>
@@ -52,8 +54,17 @@ wp_head();
 
         <!-- Header Extras (e.g., search form) -->
         <div class="header-extras">
-            <?php get_search_form(); ?>
-            <!-- Add additional elements like social icons if needed -->
+
+            <!-- Example of the HTML output from get_search_form() -->
+            <form role="search" method="get" class="search-form" action="/">
+
+                    <span class="screen-reader-text">Search for:</span>
+                    <input type="search" class="search-field" placeholder="Search..." value="" name="s">
+
+                <button type="submit" class="search-submit">Search</button>
+            </form>
+
+
         </div>
     </div>
 </header>

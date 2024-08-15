@@ -254,7 +254,18 @@ add_action('customize_register', 'mynewtheme_customize_register');
 
 
 
-
+function custom_search_form($form) {
+    $form = '
+    <form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">
+        <label>
+            <span class="screen-reader-text">Search for:</span>
+            <input type="search" class="search-field" placeholder="Search..." value="' . get_search_query() . '" name="s">
+        </label>
+        <button type="submit" class="search-submit">Search</button>
+    </form>';
+    return $form;
+}
+add_filter('get_search_form', 'custom_search_form');
 
 
 ?>

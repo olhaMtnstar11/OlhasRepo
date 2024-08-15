@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.6
+Version: 1.7
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1167,4 +1167,73 @@ a:hover {
 
 .posts .post a:hover {
     text-decoration: underline;
+}
+
+/* Style for the active menu item */
+/* Style for the active menu item */
+.primary-navigation .current-menu-item a {
+    font-weight: bold; /* Makes the text bold */
+    color: #007bff; /* Change the text color */
+    background-color: #f0f0f0; /* Changes the background color */
+    border-bottom: 2px solid #007bff; /* Adds a bottom border */
+}
+
+/* Optional: Style for hover effect */
+.primary-navigation .menu a:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+}
+
+@media (max-width: 768px) {
+    .menu a {
+        display: block; /* Full-width on smaller screens */
+        padding: 15px; /* Increased padding for touch targets */
+    }
+}
+
+/* Style for the search form container */
+.header-extras .search-form {
+    display: flex; /* Align input and button horizontally */
+    align-items: center; /* Center items vertically */
+    max-width: 100%; /* Ensure responsiveness */
+    margin: 0 auto; /* Center the form horizontally if needed */
+}
+
+/* Style for the search input */
+.header-extras .search-form input[type="search"] {
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Maximum width for better responsiveness */
+    padding: 10px;
+    border: 2px solid #ddd; /* Light border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+    box-sizing: border-box; /* Ensures padding is included in width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.header-extras .search-form input[type="search"]:focus {
+    border-color: rgba(238, 184, 113, 0.75); /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Style for the search button */
+.header-extras .search-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(131, 90, 65, 0.77); /* Background color */
+    color: #fff; /* Text color */
+    font-size: 16px;
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.header-extras .search-form button:hover {
+    background-color: rgba(131, 90, 65, 0.6); /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.header-extras .search-form button:active {
+    background-color: rgba(131, 90, 65, 0.29); /* Even darker background when pressed */
 }
