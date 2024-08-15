@@ -2,8 +2,8 @@
 <div class="label-component" >
     content-archive php
 </div>
-<div class="container">
-    <div class="post mb-5">
+<div class="container post">
+    <div class=" mb-5">
         <div class="media">
             <?php
             $itemImg = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'));

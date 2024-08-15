@@ -22,7 +22,7 @@ $bg_image = get_theme_mod('bg_image_posts');
     index php
 </div>
 
-<article class="content px-3 py-5 p-md-5">
+<article class="content px-3 py-5 p-md-5 posts">
     <?php
     if( have_posts() ) {
         while( have_posts() ){
