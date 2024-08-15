@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.9
+Version: 1.10
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1173,7 +1173,7 @@ a:hover {
 /* Style for the active menu item */
 .primary-navigation .current-menu-item a {
     font-weight: bold; /* Makes the text bold */
-    color: rgba(131, 90, 65, 0.29); /* Change the text color */
+    color: rgba(201, 130, 96, 0.77); /* Change the text color */
     background-color: rgba(131, 90, 65, 0.2); /* Changes the background color */
     border-bottom: 2px solid rgba(238, 184, 113, 0.75); /* Adds a bottom border */
 }
