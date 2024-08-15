@@ -75,10 +75,9 @@ abstract class WP_Optimize_Preloader extends Updraft_Task_Manager_1_4 {
 	 *
 	 * @param string $type     - The preload type (schedule | manual)
 	 * @param array  $response - Specific response for echo into output thread when browser connection closing.
-	 * @param bool   $silent   - If DOING_AJAX, close the connection without sending any additional data (default: false)
 	 * @return array|void - Void when closing the browser connection
 	 */
-	public function run($type = 'scheduled', $response = null, $silent = false) {
+	public function run($type = 'scheduled', $response = null) {
 		if (!$this->is_option_active()) {
 			return $this->get_option_disabled_error();
 		}
@@ -105,13 +104,7 @@ abstract class WP_Optimize_Preloader extends Updraft_Task_Manager_1_4 {
 
 		// close browser connection and continue work for ajax actions.
 		if (defined('DOING_AJAX') && DOING_AJAX) {
-			if (true === $silent) {
-				$output = '';
-			} else {
-				$output = json_encode($response);
-			}
-
-			WP_Optimize()->close_browser_connection($output);
+			WP_Optimize()->close_browser_connection(json_encode($response));
 		}
 
 		// trying to change time limit.

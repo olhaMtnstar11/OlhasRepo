@@ -10,7 +10,6 @@
 
 namespace Google\Site_Kit;
 
-use Google\Site_Kit\Core\Remote_Features\Remote_Features_Provider;
 use Google\Site_Kit\Core\Util\Feature_Flags;
 
 /**
@@ -87,11 +86,6 @@ final class Plugin {
 			return;
 		}
 
-		$options = new Core\Storage\Options( $this->context );
-
-		// Set up remote features before anything else.
-		( new Remote_Features_Provider( $this->context, $options ) )->register();
-
 		// REST route to set up a temporary tag to verify meta tag output works reliably.
 		add_filter(
 			'googlesitekit_rest_routes',
@@ -139,6 +133,8 @@ final class Plugin {
 		add_action( 'wp_head', $display_site_kit_meta );
 		add_action( 'login_head', $display_site_kit_meta );
 
+		$options = new Core\Storage\Options( $this->context );
+
 		// Register activation flag logic outside of 'init' since it hooks into
 		// plugin activation.
 		$activation_flag = new Core\Util\Activation_Flag( $this->context, $options );
@@ -164,6 +160,9 @@ final class Plugin {
 
 				$authentication = new Core\Authentication\Authentication( $this->context, $options, $user_options, $transients, $user_input );
 				$authentication->register();
+
+				$remote_features = new Core\Util\Remote_Features( $options, $authentication );
+				$remote_features->register();
 
 				$user_input->register();
 
@@ -193,7 +192,7 @@ final class Plugin {
 				$user_surveys = new Core\User_Surveys\User_Surveys( $authentication, $user_options, $survey_queue );
 				$user_surveys->register();
 
-				( new Core\Authentication\Setup( $this->context, $user_options, $authentication ) )->register();
+				( new Core\Authentication\Setup( $this->context, $user_options, $authentication, $remote_features ) )->register();
 
 				( new Core\Util\Reset( $this->context ) )->register();
 				( new Core\Util\Reset_Persistent( $this->context ) )->register();

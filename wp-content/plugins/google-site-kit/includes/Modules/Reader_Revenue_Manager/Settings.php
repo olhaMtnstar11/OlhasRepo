@@ -69,7 +69,6 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 	 */
 	protected function get_default() {
 		return array(
-			'ownerID'                                  => 0,
 			'publicationID'                            => '',
 			'publicationOnboardingState'               => '',
 			'publicationOnboardingStateLastSyncedAtMs' => 0,
@@ -97,7 +96,7 @@ class Settings extends Module_Settings implements Setting_With_Owned_Keys_Interf
 	protected function get_sanitize_callback() {
 		return function ( $option ) {
 			if ( isset( $option['publicationID'] ) ) {
-				if ( ! preg_match( '/^[a-zA-Z0-9_-]+$/', $option['publicationID'] ) ) {
+				if ( ! preg_match( '/^[a-zA-Z0-9]+$/', $option['publicationID'] ) ) {
 					$option['publicationID'] = '';
 				}
 			}
