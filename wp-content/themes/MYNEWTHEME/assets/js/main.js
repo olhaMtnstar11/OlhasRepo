@@ -10,3 +10,15 @@ $(document).ready(function() {
 	});
 
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+	const menuToggle = document.querySelector('.menu-toggle');
+	const mainNavigation = document.querySelector('.main-navigation');
+
+	if (menuToggle) {
+		menuToggle.addEventListener('click', function() {
+			mainNavigation.classList.toggle('active');
+		});
+	}
+});

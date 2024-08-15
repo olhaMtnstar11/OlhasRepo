@@ -1,19 +1,19 @@
-
-<div class="label-component" >
+<div class="label-component">
     content-archive php
 </div>
 <div class="container post">
-    <div class=" mb-5">
+    <div class="mb-5">
         <div class="media">
             <?php
+            // Get the URL of the post thumbnail
             $itemImg = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'));
             ?>
-            <div>
-                <?php
-                $itemImg;
-                ?>
-            </div>
-            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'thumbnail')); ?>" alt="Post Thumbnail">
+            <?php if ($itemImg): // Check if there is an image ?>
+                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="<?php echo $itemImg; ?>" alt="<?php the_title_attribute(); ?>">
+            <?php else: ?>
+                <!-- Fallback for posts without thumbnails -->
+                <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="<?php echo esc_url(get_template_directory_uri() . '/path/to/default-image.jpg'); ?>" alt="Default Image">
+            <?php endif; ?>
             <div class="media-body">
                 <h3 class="title mb-1"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="meta mb-1">
@@ -29,4 +29,3 @@
         </div><!--//media-->
     </div><!--//post-->
 </div><!--//container-->
-<?php

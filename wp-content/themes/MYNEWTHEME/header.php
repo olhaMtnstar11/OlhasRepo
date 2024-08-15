@@ -35,10 +35,14 @@ wp_head();
                 </a>
             <?php } ?>
         </div>
-
+        <!-- Add this button to toggle the menu visibility -->
+        <button class="menu-toggle">Menu</button>
 
         <!-- Navigation -->
         <nav class="main-navigation">
+
+
+
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary', // This should match the location set in the menu settings

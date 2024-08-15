@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.7
+Version: 1.8
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1236,4 +1236,69 @@ a:hover {
 
 .header-extras .search-form button:active {
     background-color: rgba(131, 90, 65, 0.29); /* Even darker background when pressed */
+}
+
+
+/* Default styles for mobile view */
+@media (max-width: 768px) {
+    .main-navigation {
+        display: none; /* Hide the menu by default */
+    }
+
+    .main-navigation.active {
+        display: block; /* Show the menu when active */
+    }
+
+    .menu {
+        display: block; /* Make menu items stack vertically */
+        padding: 0;
+    }
+
+    .main-navigation ul {
+        display: block; /* Stack menu items vertically */
+        padding: 0;
+    }
+
+    .main-navigation ul li {
+        display: block; /* Stack list items vertically */
+        width: 100%; /* Make menu items full width */
+    }
+
+    .main-navigation ul li a {
+        display: block;
+        padding: 15px; /* Add padding for touch targets */
+        background-color: #333; /* Background color for mobile menu items */
+    }
+
+    .main-navigation ul li a:hover,
+    .main-navigation ul li a:focus {
+        background-color: #555; /* Hover background color */
+    }
+
+    .header-extras {
+        display: none; /* Optionally hide search form or other extras */
+    }
+
+    /* Hamburger menu button */
+    .menu-toggle {
+        display: block;
+        background-color: rgba(131, 90, 65, 0.6); /* Button color */
+        color: #fff; /* Button text color */
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+
+    }
+}
+
+/* Styles for larger screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide hamburger button on larger screens */
+    }
+}
+
+.post-thumb {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
 }
