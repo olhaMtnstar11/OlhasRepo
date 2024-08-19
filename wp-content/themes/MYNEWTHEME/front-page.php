@@ -75,8 +75,8 @@
     </section>
 
     <section class="latest-posts">
-        <h2>Latest News</h2>
-        <ul>
+        <h2 class="latest-posts-title">Latest News</h2>
+        <ul class="latest-posts-list">
             <?php
             $args = array(
                 'posts_per_page' => 3,
@@ -88,11 +88,15 @@
 
             if ($latest_posts->have_posts()) :
                 while ($latest_posts->have_posts()) : $latest_posts->the_post(); ?>
-                    <li>
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('thumbnail'); ?>
-                            <h3><?php the_title(); ?></h3>
-                            <p><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
+                    <li class="latest-post-item">
+                        <a href="<?php the_permalink(); ?>" class="latest-post-link">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('thumbnail', array('class' => 'latest-post-thumbnail')); ?>
+                            <?php endif; ?>
+                            <div class="latest-post-content">
+                                <h3 class="latest-post-title"><?php the_title(); ?></h3>
+                                <p class="latest-post-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 15); ?></p>
+                            </div>
                         </a>
                     </li>
                 <?php endwhile;
@@ -102,6 +106,7 @@
             <?php endif; ?>
         </ul>
     </section>
+
 
     <section class="testimonials">
         <h2>What Our Clients Say</h2>
