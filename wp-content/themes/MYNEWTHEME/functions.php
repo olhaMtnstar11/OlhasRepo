@@ -269,31 +269,37 @@ add_filter('get_search_form', 'custom_search_form');
 
 
 //add role
-function add_custom_role() {
+function add_custom_customizer_role() {
     add_role(
-        'custom_role', // Role ID
-        __('Marketing Role'), // Display name
+        'custom_customizer', // Role ID
+        __('Custom Role For Editing Site'), // Display name
         array(
-            'read'                   => true,   // Allows the user to read content
-            'edit_posts'             => true,   // Allows the user to edit their own posts
-            'edit_others_posts'      => true,   // Allows the user to edit others' posts
-            'publish_posts'          => true,   // Allows the user to publish posts
-            'delete_posts'           => true,   // Allows the user to delete their own posts
-            'delete_others_posts'    => true,   // Allows the user to delete others' posts
-            'edit_pages'             => true,   // Allows the user to edit pages
-            'edit_others_pages'      => true,   // Allows the user to edit others' pages
-            'publish_pages'          => true,   // Allows the user to publish pages
-            'delete_pages'           => true,   // Allows the user to delete their own pages
-            'delete_others_pages'    => true,   // Allows the user to delete others' pages
-            'upload_files'           => true,   // Allows the user to upload files
-            'moderate_comments'      => true,   // Allows the user to moderate comments
-            'manage_options'         => false,  // Usually reserved for administrators
+            'read'                   => true,   // Allows reading content
+            'edit_posts'             => true,   // Allows editing their own posts
+            'edit_pages'             => true,   // Allows editing their own pages
+            'edit_theme_options'     => true,   // Allows accessing the Customizer and some site settings
+            'upload_files'           => true,   // Allows uploading files
+            'moderate_comments'      => true,   // Allows moderating comments
 
-            // Add more capabilities as needed
+            // Restrict administrative capabilities
+            'manage_options'         => false,  // Disallows managing site options and settings (includes plugins and themes)
+            'edit_plugins'           => false,  // Disallows editing plugins
+            'install_plugins'        => false,  // Disallows installing plugins
+            'update_plugins'         => false,  // Disallows updating plugins
+            'delete_plugins'         => false,  // Disallows deleting plugins
+            'edit_themes'            => false,  // Disallows editing themes
+            'switch_themes'          => false,  // Disallows switching themes
+            'install_themes'         => false,  // Disallows installing themes
+            'update_themes'          => false,  // Disallows updating themes
+            'delete_themes'          => false,  // Disallows deleting themes
+            'edit_files'             => false,  // Disallows editing theme/plugin files
+            'delete_others_posts'    => false,  // Disallows deleting others' posts
+            'delete_others_pages'    => false,  // Disallows deleting others' pages
         )
     );
 }
-add_action('init', 'add_custom_role');
+add_action('init', 'add_custom_customizer_role');
+
 
 
 
