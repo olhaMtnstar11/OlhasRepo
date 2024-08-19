@@ -268,6 +268,36 @@ function custom_search_form($form) {
 add_filter('get_search_form', 'custom_search_form');
 
 
+//add role
+function add_custom_role() {
+    add_role(
+        'custom_role', // Role ID
+        __('Marketing Role'), // Display name
+        array(
+            'read'                   => true,   // Allows the user to read content
+            'edit_posts'             => true,   // Allows the user to edit their own posts
+            'edit_others_posts'      => true,   // Allows the user to edit others' posts
+            'publish_posts'          => true,   // Allows the user to publish posts
+            'delete_posts'           => true,   // Allows the user to delete their own posts
+            'delete_others_posts'    => true,   // Allows the user to delete others' posts
+            'edit_pages'             => true,   // Allows the user to edit pages
+            'edit_others_pages'      => true,   // Allows the user to edit others' pages
+            'publish_pages'          => true,   // Allows the user to publish pages
+            'delete_pages'           => true,   // Allows the user to delete their own pages
+            'delete_others_pages'    => true,   // Allows the user to delete others' pages
+            'upload_files'           => true,   // Allows the user to upload files
+            'moderate_comments'      => true,   // Allows the user to moderate comments
+            'manage_options'         => false,  // Usually reserved for administrators
+
+            // Add more capabilities as needed
+        )
+    );
+}
+add_action('init', 'add_custom_role');
+
+
+
+
 ?>
 
 
