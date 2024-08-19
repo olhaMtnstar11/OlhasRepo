@@ -40,22 +40,31 @@
     </section>
 
     <section class="featured-posts">
-        <h2>Featured Posts</h2>
-        <div class="slider">
+        <h2 class="featured-posts-title">Featured Posts</h2>
+        <div class="featured-posts-container">
             <?php
+            // Query to get featured posts
             $args = array(
-                'posts_per_page' => 5,
+                'posts_per_page' => 4, // Number of featured posts to display
                 'post_type' => 'post',
-                'category_name' => 'featured', // Use your category slug or ID
+                'meta_key' => 'is_featured', // Custom field key for featured posts
+                'meta_value' => '1', // Value indicating the post is featured
+                'orderby' => 'date',
+                'order' => 'DESC',
             );
             $featured_posts = new WP_Query($args);
 
             if ($featured_posts->have_posts()) :
                 while ($featured_posts->have_posts()) : $featured_posts->the_post(); ?>
-                    <div class="slide">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('large'); ?>
-                            <h3><?php the_title(); ?></h3>
+                    <div class="featured-post-item">
+                        <a href="<?php the_permalink(); ?>" class="featured-post-link">
+                            <?php if (has_post_thumbnail()) : ?>
+                                <?php the_post_thumbnail('large', array('class' => 'featured-post-thumbnail')); ?>
+                            <?php endif; ?>
+                            <div class="featured-post-content">
+                                <h3 class="featured-post-title"><?php the_title(); ?></h3>
+                                <p class="featured-post-excerpt"><?php echo wp_trim_words(get_the_excerpt(), 20); ?></p>
+                            </div>
                         </a>
                     </div>
                 <?php endwhile;
@@ -65,6 +74,7 @@
             <?php endif; ?>
         </div>
     </section>
+
 
     <section class="about">
         <h2>About Us</h2>

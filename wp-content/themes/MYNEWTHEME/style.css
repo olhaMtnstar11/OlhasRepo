@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.11
+Version: 1.12
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1371,5 +1371,75 @@ a:hover {
 }
 
 .latest-post-link:hover .latest-post-title {
+    color: #0073e6;
+}
+
+
+/* Section styling */
+.featured-posts {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-posts-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container styling */
+.featured-posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual post styling */
+.featured-post-item {
+    flex: 1 1 calc(25% - 20px); /* Adjust based on desired number of columns */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-post-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-post-thumbnail {
+    width: 100%;
+    height: auto;
+}
+
+/* Content styling */
+.featured-post-content {
+    padding: 15px;
+}
+
+.featured-post-title {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.featured-post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Link styling */
+.featured-post-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured-post-link:hover .featured-post-title {
     color: #0073e6;
 }
