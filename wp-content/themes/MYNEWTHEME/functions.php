@@ -300,6 +300,22 @@ function add_custom_customizer_role() {
 }
 add_action('init', 'add_custom_customizer_role');
 
+function create_team_post_type() {
+    register_post_type('team_member',
+        array(
+            'labels'      => array(
+                'name'          => __('Team Members'),
+                'singular_name' => __('Team Member'),
+            ),
+            'public'      => true,
+            'has_archive' => true,
+            'supports'    => array('title', 'editor', 'thumbnail'),
+            'menu_position' => 5,
+            'menu_icon' => 'dashicons-groups',
+        )
+    );
+}
+add_action('init', 'create_team_post_type');
 
 
 

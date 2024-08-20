@@ -15,11 +15,24 @@
     </header>
     <?php
     the_content();
+
+    // Retrieve the image field value
+    $image = get_field('my_image'); // Replace 'my_image' with your actual field name
+
+    // Check if the image exists
+    if ($image) {
+        // Output the image
+        echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" />';
+    }
+
     ?>
     <?php
     comments_template();
     ?>
 </div>
+
+
+
 
 
 
