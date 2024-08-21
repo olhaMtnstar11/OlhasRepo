@@ -13,9 +13,6 @@
 
 
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcCPSwqAAAAADg84YzSLv0Ak2gxRr6B1MptjPyn"></script>
-
-
     <?php
 wp_head(); 
 ?>

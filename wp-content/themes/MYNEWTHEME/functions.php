@@ -387,38 +387,6 @@ add_action('init', 'create_team_post_type');
 
 
 
-function validate_recaptcha($token) {
-    $secret_key = '6LcCPSwqAAAAADMkFFAnb_bzDcC2IfDy9Avw3WHi'; // Your reCAPTCHA secret key
-    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$token");
-    $response_keys = json_decode($response, true);
-
-    if (intval($response_keys["success"]) !== 1) {
-        return false; // Invalid reCAPTCHA
-    }
-
-    // Adjust the threshold here
-    $score_threshold = 0.8; // Example threshold
-    if ($response_keys["score"] < $score_threshold) {
-        return false; // Below threshold
-    }
-
-    return true; // Valid reCAPTCHA
-}
-
-add_action('wpforms_process', 'custom_recaptcha_v3_validation', 10, 3);
-
-function custom_recaptcha_v3_validation($form_data, $form, $entry) {
-    $token = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
-    if (!validate_recaptcha($token)) {
-        wpforms()->process->errors[$form_data['id']]['recaptcha'] = 'Please complete the reCAPTCHA.';
-    }
-}
-
-
-
-
-
-
 
 
 ?>
