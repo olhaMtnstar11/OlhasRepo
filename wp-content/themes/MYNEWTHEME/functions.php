@@ -259,7 +259,7 @@ function mynewtheme_customize_register($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_image', array(
-        'label'    => __('About Background Image', 'mytheme'),
+        'label'    => __('About Image', 'mytheme'),
         'section'  => 'about_section',
         'settings' => 'about_image',
     )));
