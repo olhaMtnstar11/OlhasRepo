@@ -88,7 +88,7 @@
 
     <section class="about">
         <div class="about-us-block">
-            <img src="<?php echo esc_url($hero_image_url); ?>" alt="About Us" class="about-us-image">
+            <img src="<?php echo esc_url($about_image_url); ?>" alt="About Us" class="about-us-image">
             <div class="about-us-content">
                 <h2><?php echo $about_title; ?></h2>
                 <p><?php echo $about_description; ?></p>
