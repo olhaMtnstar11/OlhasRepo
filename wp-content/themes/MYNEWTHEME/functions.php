@@ -388,7 +388,7 @@ add_action('init', 'create_team_post_type');
 
 
 function validate_recaptcha($token) {
-    $secret_key = '6LfyMiwqAAAAAMcNaV0taAn2aidX8510p50CtwOA';
+    $secret_key = '6LcCPSwqAAAAADMkFFAnb_bzDcC2IfDy9Avw3WHi';
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$token");
     $response_keys = json_decode($response, true);
 
