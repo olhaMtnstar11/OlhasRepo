@@ -25,6 +25,32 @@ $text_to_display = !empty($footer_text) ? $footer_text : $static_text;
 </footer>
 
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcCPSwqAAAAADg84YzSLv0Ak2gxRr6B1MptjPyn', {action: 'submit'}).then(function(token) {
+                console.log('reCAPTCHA token:', token); // Log the token to the console
+
+                // Send the token to your server for verification
+                fetch('https://olhasite.wpenginepowered.com/verify-recaptcha.php', { // Make sure this URL is correct
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ token: token })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('reCAPTCHA score:', data.score); // Log the score to the console
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            });
+        });
+    });
+</script>
+
 
 </body>
 </html>
