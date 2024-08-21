@@ -118,10 +118,6 @@ function check_image_sizes() {
 
 function mynewtheme_customize_register($wp_customize) {
 
-
-
-
-
     // Add a new section for bg color of some page
     $wp_customize->add_section('bg_page_section', array(
         'title'    => __('bg color Section', 'mytheme'),
@@ -247,6 +243,77 @@ function mynewtheme_customize_register($wp_customize) {
         'section'  => 'footer_section',
         'type'     => 'text',
     ));
+
+
+
+    // Add a new section for the about
+    $wp_customize->add_section('about_section', array(
+        'title'    => __('About Section', 'mytheme'),
+        'priority' => 30,
+    ));
+
+    // Add setting for about Background Image
+    $wp_customize->add_setting('about_image', array(
+        'default'   => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'about_image', array(
+        'label'    => __('About Background Image', 'mytheme'),
+        'section'  => 'about_section',
+        'settings' => 'about_image',
+    )));
+    // Add setting for about Title
+    $wp_customize->add_setting('about_title', array(
+        'default'   => 'About',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('about_title', array(
+        'label'    => __('About Title', 'mytheme'),
+        'section'  => 'about_section',
+        'type'     => 'text',
+    ));
+
+    // Add setting for about Description
+    $wp_customize->add_setting('about_description', array(
+        'default'   => 'Description',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('about_description', array(
+        'label'    => __('About Description', 'mytheme'),
+        'section'  => 'about_section',
+        'type'     => 'textarea',
+    ));
+
+    // Add setting for about Button Text
+    $wp_customize->add_setting('about_button_text', array(
+        'default'   => 'Learn More',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('about_button_text', array(
+        'label'    => __('About Button Text', 'mytheme'),
+        'section'  => 'about_section',
+        'type'     => 'text',
+    ));
+
+    // Add setting for about Button URL
+    $wp_customize->add_setting('about_button_url', array(
+        'default'   => home_url('/about'),
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('about_button_url', array(
+        'label'    => __('About Button URL', 'mytheme'),
+        'section'  => 'about_section',
+        'type'     => 'url',
+    ));
+
+
+
+
 
 
 }

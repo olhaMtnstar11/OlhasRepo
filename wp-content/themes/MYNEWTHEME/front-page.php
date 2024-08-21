@@ -11,6 +11,16 @@
     $hero_description = get_theme_mod('hero_description');
     $hero_button_text = get_theme_mod('hero_button_text');
     $hero_button_url = get_theme_mod('hero_button_url');
+
+
+    //about
+    $about_image_url = get_theme_mod('about_image');
+    $about_title = get_theme_mod('about_title');
+    $about_description = get_theme_mod('about_description');
+    $about_button_text = get_theme_mod('about_button_text');
+    $about_button_url = get_theme_mod('about_button_url');
+
+
     ?>
 
     <style>
@@ -77,12 +87,23 @@
 
 
     <section class="about">
-        <h2>About Us</h2>
-        <div class="about-content">
-            <p><?php echo get_theme_mod('welcome_message', 'Welcome to our website!'); ?></p>
-            <a href="<?php echo esc_url(home_url('/contact')); ?>" class="btn-secondary">Contact Us</a>
+        <div class="about-us-block">
+            <img src="<?php echo esc_url($hero_image_url); ?>" alt="About Us" class="about-us-image">
+            <div class="about-us-content">
+                <h2><?php echo $about_title; ?></h2>
+                <p><?php echo $about_description; ?></p>
+                <a href="<?php echo $about_button_url; ?>" class="custom-button"><?php echo $about_button_text; ?></a>
+            </div>
         </div>
     </section>
+
+
+
+
+
+
+
+
 
     <section class="latest-posts">
         <h2 class="latest-posts-title">Latest News</h2>
