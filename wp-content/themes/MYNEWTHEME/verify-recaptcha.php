@@ -17,5 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'success' => intval($response_keys['success']),
         'score' => $response_keys['score']
     ]);
+} else {
+    // Return 404 for non-POST requests
+    header("HTTP/1.0 404 Not Found");
 }
 ?>

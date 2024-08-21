@@ -32,14 +32,19 @@ $text_to_display = !empty($footer_text) ? $footer_text : $static_text;
                 console.log('reCAPTCHA token:', token); // Log the token to the console
 
                 // Send the token to your server for verification
-                fetch('https://olhasite.wpenginepowered.com/verify-recaptcha.php', { // Make sure this URL is correct
+                fetch('https://olhasite.wpenginepowered.com/verify-recaptcha.php', { // Ensure this URL is correct
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({ token: token })
                 })
-                    .then(response => response.json())
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
                     .then(data => {
                         console.log('reCAPTCHA score:', data.score); // Log the score to the console
                     })
@@ -50,6 +55,7 @@ $text_to_display = !empty($footer_text) ? $footer_text : $static_text;
         });
     });
 </script>
+
 
 
 </body>
