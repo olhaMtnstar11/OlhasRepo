@@ -49,22 +49,57 @@ add_action( 'wp_enqueue_scripts', 'mynewtheme_register_style');
 
 
 function mynewtheme_register_scripts() {
-
     $version = wp_get_theme()->get( 'Version' );
 
-    wp_enqueue_script("mynewtheme_jquery", "https://code.jquery.com/jquery-3.4.1.slim.min.js", array(), "3.4.1", true);
+    // Register and enqueue jQuery
+    wp_enqueue_script(
+        "mynewtheme_jquery",
+        "https://code.jquery.com/jquery-3.4.1.slim.min.js",
+        array(), // Dependencies (none in this case)
+        "3.4.1",
+        true // Load in footer
+    );
 
-    wp_enqueue_script("mynewtheme_popper", "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js", array(), "1.16.0", true);
+    // Register and enqueue Popper.js
+    wp_enqueue_script(
+        "mynewtheme_popper",
+        "https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js",
+        array(), // Dependencies (none in this case)
+        "1.16.0",
+        true // Load in footer
+    );
 
-    wp_enqueue_script("mynewtheme_bootstrap", "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", array(), "4.4.1", true);
+    // Register and enqueue Bootstrap
+    wp_enqueue_script(
+        "mynewtheme_bootstrap",
+        "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js",
+        array("mynewtheme_jquery"), // jQuery is a dependency
+        "4.4.1",
+        true // Load in footer
+    );
 
-    wp_enqueue_script("mynewtheme_main", get_template_directory_uri() . "/assets/js//main.js", array(), $version, true);
+    // Register and enqueue main.js
+    wp_enqueue_script(
+        "mynewtheme_main",
+        get_template_directory_uri() . "/assets/js/main.js",
+        array("mynewtheme_jquery", "mynewtheme_bootstrap"), // Dependencies
+        $version,
+        true // Load in footer
+    );
 
-    wp_enqueue_script("mynewtheme_recaptcha", "https://www.google.com/recaptcha/api.js", array(), $version, true);
-
+    // Register and enqueue reCAPTCHA
+    wp_enqueue_script(
+        "mynewtheme_recaptcha",
+        "https://www.google.com/recaptcha/api.js",
+        array(), // No dependencies
+        null, // Versioning (not needed for external scripts)
+        true // Load in footer
+    );
 }
 
-add_action( 'wp_enqueue_scripts', 'mynewtheme_register_scripts');
+// Hook into the wp_enqueue_scripts action
+add_action( 'wp_enqueue_scripts', 'mynewtheme_register_scripts' );
+
 
 
 
