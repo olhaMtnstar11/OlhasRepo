@@ -91,7 +91,7 @@ function mynewtheme_register_scripts() {
 
     wp_enqueue_script(
         "mynewtheme_recaptcha",
-        "https://www.google.com/recaptcha/api.js?render=6Lcw2CwqAAAAAK2G8Gg3y3iQ_sOKK6IcMhLQJYRy",
+        "https://www.google.com/recaptcha/api.js?render=6LeT5iwqAAAAACzoI0wJuFMqCNv1QIkptUrj1HPP",
         array(),
         $version,
         true);
