@@ -88,13 +88,14 @@ function mynewtheme_register_scripts() {
     );
 
     // Register and enqueue reCAPTCHA
+
     wp_enqueue_script(
         "mynewtheme_recaptcha",
-        "https://www.google.com/recaptcha/api.js",
-        array(), // No dependencies
-        null, // Versioning (not needed for external scripts)
-        true // Load in footer
-    );
+        "https://www.google.com/recaptcha/api.js?render=6Lcw2CwqAAAAAK2G8Gg3y3iQ_sOKK6IcMhLQJYRy",
+        array(),
+        $version,
+        true);
+
 }
 
 // Hook into the wp_enqueue_scripts action
