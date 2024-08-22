@@ -60,7 +60,8 @@ function mynewtheme_register_scripts() {
 
     wp_enqueue_script("mynewtheme_main", get_template_directory_uri() . "/assets/js//main.js", array(), $version, true);
 
-    
+    wp_enqueue_script("mynewtheme_recaptcha", "https://www.google.com/recaptcha/api.js", array(), $version, true);
+
 }
 
 add_action( 'wp_enqueue_scripts', 'mynewtheme_register_scripts');
