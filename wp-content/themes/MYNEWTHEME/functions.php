@@ -387,8 +387,6 @@ add_action('init', 'create_team_post_type');
 
 
 
-
-
 ?>
 
 

@@ -26,9 +26,6 @@ $text_to_display = !empty($footer_text) ? $footer_text : $static_text;
 
 </div>
 
-
-
-
 </body>
 </html>
 

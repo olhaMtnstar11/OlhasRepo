@@ -11,8 +11,6 @@
     <link rel="shortcut icon" href="/wp-content/themes/mynewtheme/assets/images/logo.png">
     <title>hey!</title>
 
-
-
     <?php
 wp_head(); 
 ?>
