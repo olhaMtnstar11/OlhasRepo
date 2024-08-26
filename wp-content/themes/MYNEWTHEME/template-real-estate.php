@@ -1,27 +1,47 @@
 <?php
-/* Template Name: Real Estate */
-get_header(); ?>
+/* Template Name: Real Estate Template */
+ ?>
+<?php get_header(); ?>
 
-<div class="container-real-estate">
+<div class="container">
     <h1><?php the_title(); ?></h1>
 
-    <?php
-    // Check if the ACF plugin is active
-    if (function_exists('get_field')) {
-
-        // Get the custom fields
-        $image = get_field('image_field_name'); // Replace with your actual field name
-        $text = get_field('text_field_name'); // Replace with your actual field name
-
-        if ($image) {
-            echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '" />';
-        }
-
-        if ($text) {
-            echo '<p>' . esc_html($text) . '</p>';
-        }
-    }
-    ?>
+    <?php if (have_rows('content_rows')) : ?>
+        <?php while (have_rows('content_rows')) : the_row(); ?>
+            <?php
+            $image = get_sub_field('image');
+            $text = get_sub_field('text');
+            $position = get_sub_field('position');
+            ?>
+            <div class="content-row <?php echo esc_attr($position); ?>">
+                <?php if ($position == 'Left') : ?>
+                    <div class="image">
+                        <?php if ($image) : ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                    <div class="text">
+                        <?php if ($text) : ?>
+                            <p><?php echo esc_html($text); ?></p>
+                        <?php endif; ?>
+                    </div>
+                <?php else : ?>
+                    <div class="text">
+                        <?php if ($text) : ?>
+                            <p><?php echo esc_html($text); ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="image">
+                        <?php if ($image) : ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endwhile; ?>
+    <?php else : ?>
+        <p>No content found.</p>
+    <?php endif; ?>
 </div>
 
 <?php get_footer(); ?>

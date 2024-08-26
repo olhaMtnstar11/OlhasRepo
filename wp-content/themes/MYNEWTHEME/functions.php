@@ -418,9 +418,24 @@ function create_team_post_type() {
             'menu_icon' => 'dashicons-groups',
         )
     );
+
+    register_post_type('real_estate',
+        array(
+            'labels' => array(
+                'name' => __('Real Estates'),
+                'singular_name' => __('Real Estate'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail'), // Add 'page-attributes' if needed for templates
+            'rewrite' => array('slug' => 'real-estate'),
+        )
+    );
+
+
+
 }
 add_action('init', 'create_team_post_type');
-
 
 
 
