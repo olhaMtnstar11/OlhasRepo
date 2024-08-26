@@ -24,8 +24,9 @@ $bg_image = get_theme_mod('bg_image_posts');
 
 
 
-<button id="create-post-button">Create New Post</button>
-
+<div class="create-post-container">
+    <button id="create-post-button">Create New Post</button>
+</div>
 
 <article class="content px-3 py-5 p-md-5 posts">
     <?php

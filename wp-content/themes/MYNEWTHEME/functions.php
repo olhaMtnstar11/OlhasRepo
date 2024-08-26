@@ -473,10 +473,6 @@ function load_custom_jquery() {
 }
 add_action('wp_enqueue_scripts', 'load_custom_jquery');
 
-
-
-
-
 ?>
 
 
