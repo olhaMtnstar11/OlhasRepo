@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Real Estate Template */
+/* Template Name: Real Estate */
 get_header(); ?>
 
 <div class="container-real-estate">
