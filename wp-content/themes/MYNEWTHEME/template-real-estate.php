@@ -1,47 +1,75 @@
 <?php
 /* Template Name: Real Estate Template */
- ?>
-<?php get_header(); ?>
 
-<div class="container">
-    <h1><?php the_title(); ?></h1>
+get_header(); ?>
 
-    <?php if (have_rows('content_rows')) : ?>
-        <?php while (have_rows('content_rows')) : the_row(); ?>
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+
+        <?php
+        // Display content of the page
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                the_content();
+            endwhile;
+        endif;
+
+        // Query for team members
+        $args = array(
+            'post_type' => 'real_estate',
+            'posts_per_page' => -1,
+
+            'orderby' => 'meta_value',
+            'order' => 'ASC',
+        );
+        $team_query = new WP_Query( $args );
+
+        // Initialize grouping array
+        $groups = array();
+
+        if ( $team_query->have_posts() ) :
+            while ( $team_query->have_posts() ) : $team_query->the_post();
+                $group = get_field('team_group'); // Get team group field
+                if (!isset($groups[$group])) {
+                    $groups[$group] = array();
+                }
+                $groups[$group][] = get_the_ID();
+            endwhile;
+
+            foreach ($groups as $group_name => $members) :
+                ?>
+                <section class="team-group">
+                    <h2><?php echo esc_html($group_name); ?></h2>
+                    <div class="team-members">
+                        <?php
+                        foreach ($members as $member_id) :
+                            $post = get_post($member_id);
+                            setup_postdata($post);
+                            ?>
+                            <div class="team-member">
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <div class="team-member-image">
+                                        <?php the_post_thumbnail(); ?>
+                                    </div>
+                                <?php endif; ?>
+                                <div class="team-member-info">
+                                    <h3><?php the_title(); ?></h3>
+                                    <p><?php the_field('text'); ?></p>
+
+                                </div>
+                            </div>
+                        <?php
+                        endforeach;
+                        wp_reset_postdata();
+                        ?>
+                    </div>
+                </section>
             <?php
-            $image = get_sub_field('image');
-            $text = get_sub_field('text');
-            $position = get_sub_field('position');
-            ?>
-            <div class="content-row <?php echo esc_attr($position); ?>">
-                <?php if ($position == 'Left') : ?>
-                    <div class="image">
-                        <?php if ($image) : ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                    <div class="text">
-                        <?php if ($text) : ?>
-                            <p><?php echo esc_html($text); ?></p>
-                        <?php endif; ?>
-                    </div>
-                <?php else : ?>
-                    <div class="text">
-                        <?php if ($text) : ?>
-                            <p><?php echo esc_html($text); ?></p>
-                        <?php endif; ?>
-                    </div>
-                    <div class="image">
-                        <?php if ($image) : ?>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        <?php endwhile; ?>
-    <?php else : ?>
-        <p>No content found.</p>
-    <?php endif; ?>
-</div>
+            endforeach;
+        endif;
+        ?>
+
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>
