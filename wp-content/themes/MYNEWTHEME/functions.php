@@ -424,6 +424,59 @@ add_action('init', 'create_team_post_type');
 
 
 
+//add new post
+function enqueue_custom_script() {
+    // Enqueue the full version of jQuery
+    wp_enqueue_script('jquery'); // WordPress's jQuery should be the full version
+
+    // Enqueue your custom script
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/assets/js/custom-script.js', array('jquery'), null, true);
+
+    // Localize the script with ajaxurl
+    wp_localize_script('custom-script', 'myAjax', array(
+        'ajaxurl' => admin_url('admin-ajax.php')
+    ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_script');
+
+
+
+//Handle the AJAX Request in PHP
+function create_new_post() {
+    // Check for nonce security or user permissions as needed
+    $title = sanitize_text_field($_POST['title']);
+    $content = sanitize_textarea_field($_POST['content']);
+
+    $post_data = array(
+        'post_title'   => $title,
+        'post_content' => $content,
+        'post_status'  => 'publish', // Change to 'draft' if you don't want to publish immediately
+        'post_author'  => get_current_user_id(),
+    );
+
+    $post_id = wp_insert_post($post_data);
+
+    if ($post_id) {
+        echo json_encode(array('success' => true));
+    } else {
+        echo json_encode(array('success' => false));
+    }
+
+    wp_die(); // Required to terminate immediately and return a proper response
+}
+add_action('wp_ajax_create_new_post', 'create_new_post');
+
+//Add this to functions.php to load the full version of jquery manually:
+function load_custom_jquery() {
+    wp_deregister_script('jquery'); // Deregister the current version
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.4.min.js', array(), null, true); // Load the full version
+}
+add_action('wp_enqueue_scripts', 'load_custom_jquery');
+
+
+
+
+
 ?>
 
 

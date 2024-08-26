@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.14
+Version: 1.15
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1595,4 +1595,23 @@ a:hover {
 .about-us-link:hover {
     background-color: #0073aa; /* Background color on hover */
     color: #fff; /* Text color on hover */
+}
+
+#create-post-button {
+    background-color: #0073e6; /* Button background color */
+    color: white;              /* Button text color */
+    border: none;              /* Remove button border */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 10px 20px;        /* Button padding */
+    font-size: 16px;           /* Font size */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#create-post-button:hover {
+    background-color: #005bb5; /* Darker background color on hover */
+}
+
+#create-post-button:focus {
+    outline: none; /* Remove default focus outline */
 }

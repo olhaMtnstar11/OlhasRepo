@@ -17,7 +17,7 @@ $bg_image = get_theme_mod('bg_image_posts');
     }
 </style>
 
-
+<button id="create-post-button">Create New Post</button>
 <div class="label-component" >
     index php
 </div>
