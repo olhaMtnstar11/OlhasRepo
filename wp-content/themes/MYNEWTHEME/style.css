@@ -1629,3 +1629,22 @@ a:hover {
 
 
 
+
+
+.container-real-estate {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+
