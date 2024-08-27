@@ -1,4 +1,5 @@
 <?php
+<?php
 /**
  * Template Name: Vehicle Template
  * Template Post Type: vehicle
@@ -26,17 +27,21 @@ if ($posts_query->have_posts()) :
             $price_v = get_field('price_v');
             $color_box_v = get_field('color_box_v');
 
-            // Check if image_v is an array with 'url' key
-            if (is_array($image_v) && isset($image_v['url'])) {
+            // Check if image_v is an array and extract attributes
+            if (is_array($image_v)) {
                 $image_url = esc_url($image_v['url']);
                 $image_alt = esc_attr($image_v['alt']);
+                $image_width = isset($image_v['width']) ? intval($image_v['width']) : 150;
+                $image_height = isset($image_v['height']) ? intval($image_v['height']) : 150;
             } else {
                 $image_url = 'path/to/placeholder-image.png'; // Fallback placeholder image URL
                 $image_alt = 'No image available';
+                $image_width = 150;
+                $image_height = 150;
             }
 
-            // Ensure year_v is a number and format it
-            $formatted_year = !empty($year_v) ? intval($year_v) : 'N/A';
+            // Ensure year_v is a number and format it properly
+            $formatted_year = !empty($year_v) && is_numeric($year_v) ? intval($year_v) : 'N/A';
             $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
 
             // Sanitize color value
@@ -44,7 +49,7 @@ if ($posts_query->have_posts()) :
             ?>
             <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
                 <div class="vehicle-card-image">
-                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" width="150" height="150">
+                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>">
                 </div>
                 <div class="vehicle-card-content">
                     <h2 class="vehicle-card-title"><?php echo esc_html($brand_v . ' ' . $model_v); ?></h2>
@@ -63,4 +68,5 @@ if ($posts_query->have_posts()) :
 endif;
 
 get_footer();
+
 
