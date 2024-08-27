@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.22
+Version: 1.23
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1717,5 +1717,59 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Grid container for vehicle cards */
+.vehicle-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between cards */
+}
+
+/* Individual vehicle card */
+.vehicle-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Three columns layout, adjust if needed */
+    box-sizing: border-box;
+}
+
+/* Image section in the vehicle card */
+.vehicle-card-image {
+    text-align: center;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+/* Image styling */
+.vehicle-card-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Content section in the vehicle card */
+.vehicle-card-content {
+    padding: 15px;
+}
+
+/* Title in the vehicle card */
+.vehicle-card-title {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Styling for content paragraphs in the vehicle card */
+.vehicle-card-content p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+/* Label styling in the vehicle card */
+.vehicle-card-content strong {
+    display: inline-block;
+    width: 100px; /* Align labels */
 }
 
