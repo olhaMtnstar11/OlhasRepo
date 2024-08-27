@@ -14,51 +14,50 @@ $posts_query = new WP_Query($args);
 
 if ($posts_query->have_posts()) :
     ?>
-    <div class="content-wrapper">
+    <div class="grid-wrapper">
         <?php
         while ($posts_query->have_posts()) : $posts_query->the_post();
             // Get ACF fields
-            $url = get_field('url'); // URL field
-            $taxonomy = get_field('t-acf'); // Taxonomy field
-            $text = get_field('text'); // Text field
-            $img_1 = get_field('img_1'); // Image 1 field
-            $img_2 = get_field('img_2'); // Image 2 field
-            $number = get_field('number'); // Number field
-            $add_file = get_field('add_file'); // File field
-
-            // Check conditions
-            $show_text = $taxonomy && $url;
-            $show_add_file = $number > 5;
-
-            if ($show_text || $show_add_file) :
-                ?>
-                <div class="content-item">
-                    <?php if ($show_text) : ?>
-                        <div class="text-section">
-                            <p><?php echo esc_html($text); ?></p>
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($img_1) : ?>
-                        <div class="image-section">
-                            <img src="<?php echo esc_url($img_1['url']); ?>" alt="<?php echo esc_attr($img_1['alt']); ?>">
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($img_2) : ?>
-                        <div class="image-section">
-                            <img src="<?php echo esc_url($img_2['url']); ?>" alt="<?php echo esc_attr($img_2['alt']); ?>">
-                        </div>
-                    <?php endif; ?>
-
-                    <?php if ($show_add_file && $add_file) : ?>
-                        <div class="file-section">
-                            <a href="<?php echo esc_url($add_file['url']); ?>" download><?php echo esc_html($add_file['filename']); ?></a>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            <?php
-            endif;
+            $fields = array(
+                'URL'          => get_field('url'),
+                'Taxonomy'     => get_field('t-acf'),
+                'Text'         => get_field('text'),
+                'Image 1'      => get_field('img_1'),
+                'Image 2'      => get_field('img_2'),
+                'Number'       => get_field('number'),
+                'File'         => get_field('add_file'),
+            );
+            ?>
+            <div class="grid-item">
+                <h2><?php the_title(); ?></h2>
+                <table>
+                    <tbody>
+                    <?php foreach ($fields as $label => $value) : ?>
+                        <tr>
+                            <th><?php echo esc_html($label); ?></th>
+                            <td>
+                                <?php
+                                if (is_array($value)) {
+                                    // Handle different types of values
+                                    if (isset($value['url'])) {
+                                        // URL or file
+                                        echo '<a href="' . esc_url($value['url']) . '" download>' . esc_html($value['filename'] ?? 'Download') . '</a>';
+                                    } elseif (isset($value['url'])) {
+                                        // Image
+                                        echo '<img src="' . esc_url($value['url']) . '" alt="' . esc_attr($value['alt']) . '">';
+                                    }
+                                } else {
+                                    // Text and number
+                                    echo esc_html($value);
+                                }
+                                ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php
         endwhile;
         ?>
     </div>

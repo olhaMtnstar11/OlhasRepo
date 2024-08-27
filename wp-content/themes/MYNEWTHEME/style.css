@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.21
+Version: 1.22
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1669,29 +1669,53 @@ a:hover {
     }
 }
 
-.content-wrapper {
+.grid-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust spacing between grid items */
 }
 
-.content-item {
-    margin-bottom: 20px; /* Spacing between items */
+.grid-item {
+    flex: 1 1 calc(33.333% - 20px); /* Three columns, adjust as needed */
+    box-sizing: border-box;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
 }
 
-.text-section {
-    margin-bottom: 10px; /* Spacing below text */
+.grid-item h2 {
+    margin-top: 0;
+    font-size: 1.5em;
 }
 
-.image-section {
-    margin-bottom: 10px; /* Spacing below images */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.image-section img {
-    max-width: 100%; /* Ensure images do not overflow */
-    height: auto; /* Maintain aspect ratio */
+th {
+    text-align: left;
+    padding: 8px;
+    background: #f1f1f1;
+    font-weight: bold;
 }
 
-.file-section {
-    margin-top: 10px; /* Spacing above file link */
+td {
+    padding: 8px;
+}
+
+img {
+    max-width: 100%; /* Ensure images fit within their container */
+    height: auto;
+}
+
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
