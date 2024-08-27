@@ -38,7 +38,7 @@ if ($posts_query->have_posts()) :
                 $image_url = esc_url($image_v['url']);
                 $image_alt = esc_attr($image_v['alt']);
             } else {
-                $image_url = 'path/to/placeholder-image.png'; // Fallback placeholder image URL
+                $image_url = 'https://as2.ftcdn.net/v2/jpg/03/61/20/19/1000_F_361201954_rxrcXcVvMP21ayZtbVves7i4xIAIlyNS.jpg'; // Fallback placeholder image URL
                 $image_alt = 'No image available';
             }
             ?>
