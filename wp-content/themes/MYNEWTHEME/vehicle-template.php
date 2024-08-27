@@ -44,7 +44,7 @@ if ($posts_query->have_posts()) :
             ?>
             <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
                 <div class="vehicle-card-image">
-                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" width="150" height="150">
+                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" >
                 </div>
                 <div class="vehicle-card-content">
                     <h2 class="vehicle-card-title"><?php echo esc_html($brand_v . ' ' . $model_v); ?></h2>
