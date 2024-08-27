@@ -30,17 +30,22 @@ if ($posts_query->have_posts()) :
             $formatted_year = !empty($year_v) ? date('Y', strtotime($year_v)) : 'N/A';
             $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
 
+            // Sanitize color value
+            $border_color = !empty($color_box_v) ? esc_attr($color_box_v) : '#ddd';
+
+            // Debug: Check if image URL is being retrieved
+            if ($image_v) {
+                $image_url = esc_url($image_v['url']);
+                $image_alt = esc_attr($image_v['alt']);
+            } else {
+                $image_url = 'path/to/placeholder-image.png'; // Fallback placeholder image URL
+                $image_alt = 'No image available';
+            }
             ?>
-            <div class="vehicle-card">
-                <?php if ($image_v && !empty($image_v['url'])) : ?>
-                    <div class="vehicle-card-image">
-                        <img src="<?php echo esc_url($image_v['url']); ?>" alt="<?php echo esc_attr($image_v['alt']); ?>" width="150" height="150">
-                    </div>
-                <?php else: ?>
-                    <div class="vehicle-card-image">
-                        <p>No Image Available</p>
-                    </div>
-                <?php endif; ?>
+            <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
+                <div class="vehicle-card-image">
+                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" width="150" height="150">
+                </div>
                 <div class="vehicle-card-content">
                     <h2 class="vehicle-card-title"><?php echo esc_html($brand_v . ' ' . $model_v); ?></h2>
                     <p><strong>Year:</strong> <?php echo esc_html($formatted_year); ?></p>
@@ -58,4 +63,3 @@ if ($posts_query->have_posts()) :
 endif;
 
 get_footer();
-
