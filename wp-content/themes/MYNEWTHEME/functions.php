@@ -427,8 +427,8 @@ function create_team_post_type() {
             ),
             'public' => true,
             'has_archive' => true,
-            'supports' => array('title', 'editor', 'thumbnail'), // Add 'page-attributes' if needed for templates
-            'rewrite' => array('slug' => 'real-estate'),
+            'supports' => array('title', 'featured-image', 'editor', 'thumbnail'), // Add 'page-attributes' if needed for templates
+
         )
     );
     function create_custom_post_type() {
