@@ -1,5 +1,5 @@
 <?php
-<?php
+
 /**
  * Template Name: Vehicle Template
  * Template Post Type: vehicle
