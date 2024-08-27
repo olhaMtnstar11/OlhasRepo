@@ -1668,3 +1668,30 @@ a:hover {
         max-width: 100%; /* Full width for both sections on small screens */
     }
 }
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-item {
+    margin-bottom: 20px; /* Spacing between items */
+}
+
+.text-section {
+    margin-bottom: 10px; /* Spacing below text */
+}
+
+.image-section {
+    margin-bottom: 10px; /* Spacing below images */
+}
+
+.image-section img {
+    max-width: 100%; /* Ensure images do not overflow */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.file-section {
+    margin-top: 10px; /* Spacing above file link */
+}
+

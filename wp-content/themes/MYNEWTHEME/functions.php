@@ -431,6 +431,20 @@ function create_team_post_type() {
             'rewrite' => array('slug' => 'real-estate'),
         )
     );
+    function create_custom_post_type() {
+        register_post_type('olhas-by-acf',
+            array(
+                'labels'      => array(
+                    'name'          => __('Olhas-by-ACF'),
+                    'singular_name' => __('Olhas-by-ACF'),
+                ),
+                'public'      => true,
+                'has_archive' => true,
+                'supports'    => array('title', 'featured-image'),
+            )
+        );
+    }
+    add_action('init', 'create_custom_post_type');
 
 
 
