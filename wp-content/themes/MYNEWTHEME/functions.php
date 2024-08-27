@@ -431,7 +431,7 @@ function create_team_post_type() {
 
         )
     );
-    function create_custom_post_type() {
+
         register_post_type('olhas-by-acf',
             array(
                 'labels'      => array(
@@ -443,8 +443,6 @@ function create_team_post_type() {
                 'supports'    => array('title', 'featured-image'),
             )
         );
-    }
-    add_action('init', 'create_custom_post_type');
 
 
 
