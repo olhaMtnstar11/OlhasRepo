@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.19
+Version: 1.21
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1630,24 +1630,6 @@ a:hover {
 
 
 
-
-.container-real-estate {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-p {
-    font-size: 18px;
-    color: #333;
-}
-
-
 .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -1655,33 +1637,34 @@ p {
 
 .content-item {
     display: flex;
-    margin-bottom: 20px; /* Adjust spacing between items as needed */
+    margin-bottom: 20px; /* Adjust spacing between items */
+    align-items: center; /* Center content vertically */
+}
+
+.image, .text {
+    flex: 1; /* Take up equal space, adjust for your needs */
 }
 
 .image {
-    flex: 0 0 60%; /* Take up 60% of the width */
-    padding: 10px; /* Optional: Adjust padding around image */
+    max-width: 60%; /* Adjust based on your layout needs */
 }
 
 .text {
-    flex: 0 0 40%; /* Take up 40% of the width */
-    padding: 10px; /* Optional: Adjust padding around text */
+    max-width: 40%; /* Adjust based on your layout needs */
+    padding: 20px; /* Optional: Add padding for better readability */
 }
 
 .image img {
-    max-width: 100%; /* Ensure image does not overflow */
+    width: 100%; /* Ensure the image takes up the full width of its container */
     height: auto; /* Maintain aspect ratio */
 }
 
-.text p {
-    margin: 0; /* Remove default paragraph margin */
-}
 @media (max-width: 768px) {
     .content-item {
         flex-direction: column; /* Stack text and image vertically on small screens */
     }
+
     .image, .text {
-        flex: 1 1 100%; /* Both sections take full width */
+        max-width: 100%; /* Full width for both sections on small screens */
     }
 }
-
