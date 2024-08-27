@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Team Page */
+/* Template Name: Vehicle template */
 get_header(); ?>
 
     <div id="primary" class="content-area">
