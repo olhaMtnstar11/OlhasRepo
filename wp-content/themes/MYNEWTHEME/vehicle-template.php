@@ -1,9 +1,6 @@
 <?php
 /**
  * Template Name: Vehicle Template
-<?php
-/**
- * Template Name: Vehicle Template
  * Template Post Type: vehicle
  */
 get_header();
@@ -35,9 +32,13 @@ if ($posts_query->have_posts()) :
 
             ?>
             <div class="vehicle-card">
-                <?php if ($image_v) : ?>
+                <?php if ($image_v && !empty($image_v['url'])) : ?>
                     <div class="vehicle-card-image">
                         <img src="<?php echo esc_url($image_v['url']); ?>" alt="<?php echo esc_attr($image_v['alt']); ?>" width="150" height="150">
+                    </div>
+                <?php else: ?>
+                    <div class="vehicle-card-image">
+                        <p>No Image Available</p>
                     </div>
                 <?php endif; ?>
                 <div class="vehicle-card-content">
@@ -53,6 +54,8 @@ if ($posts_query->have_posts()) :
         ?>
     </div>
     <?php
-    wp_reset_postdata(); // Restore origin
+    wp_reset_postdata(); // Restore original post data
+endif;
 
+get_footer();
 
