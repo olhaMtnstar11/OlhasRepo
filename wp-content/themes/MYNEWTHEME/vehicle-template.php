@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Vehicle Template
- * Template Post Type: vehicle
+
  */
 get_header();
 
