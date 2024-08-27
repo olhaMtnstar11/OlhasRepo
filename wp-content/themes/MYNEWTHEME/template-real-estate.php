@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Real Estate Template
- * Template Post Type: real_estate
+
  */
 ?>
 <?php
