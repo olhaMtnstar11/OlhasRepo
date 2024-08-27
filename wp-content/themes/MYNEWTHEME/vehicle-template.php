@@ -1,6 +1,9 @@
 <?php
 /**
  * Template Name: Vehicle Template
+<?php
+/**
+ * Template Name: Vehicle Template
  * Template Post Type: vehicle
  */
 get_header();
@@ -26,6 +29,10 @@ if ($posts_query->have_posts()) :
             $price_v = get_field('price_v');
             $color_box_v = get_field('color_box_v');
 
+            // Format the year and mileage
+            $formatted_year = !empty($year_v) ? date('Y', strtotime($year_v)) : 'N/A';
+            $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
+
             ?>
             <div class="vehicle-card">
                 <?php if ($image_v) : ?>
@@ -35,8 +42,8 @@ if ($posts_query->have_posts()) :
                 <?php endif; ?>
                 <div class="vehicle-card-content">
                     <h2 class="vehicle-card-title"><?php echo esc_html($brand_v . ' ' . $model_v); ?></h2>
-                    <p><strong>Year:</strong> <?php echo esc_html($year_v); ?></p>
-                    <p><strong>Mileage:</strong> <?php echo esc_html($mileg_v); ?></p>
+                    <p><strong>Year:</strong> <?php echo esc_html($formatted_year); ?></p>
+                    <p><strong>Mileage:</strong> <?php echo esc_html($formatted_mileage); ?> miles</p>
                     <p><strong>Price:</strong> <?php echo esc_html($price_v); ?></p>
                     <p><strong>Color:</strong> <?php echo esc_html($color_box_v); ?></p>
                 </div>
@@ -46,8 +53,6 @@ if ($posts_query->have_posts()) :
         ?>
     </div>
     <?php
-    wp_reset_postdata(); // Restore original post data
-endif;
+    wp_reset_postdata(); // Restore origin
 
-get_footer();
 
