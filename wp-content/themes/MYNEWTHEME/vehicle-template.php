@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Vehicle Template
-
+ * Template Post Type: vehicle
  */
 get_header();
 
@@ -35,7 +35,7 @@ if ($posts_query->have_posts()) :
                 $image_alt = 'No image available';
             }
 
-            // Format the year and mileage
+            // Ensure year_v is a number and format it
             $formatted_year = !empty($year_v) ? intval($year_v) : 'N/A';
             $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
 
