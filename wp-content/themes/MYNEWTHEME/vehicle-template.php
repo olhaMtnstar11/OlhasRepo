@@ -2,8 +2,8 @@
 
 /**
  * Template Name: Vehicle Template
- * Template Post Type: vehicle
  */
+
 get_header();
 
 // Query the posts
@@ -46,6 +46,9 @@ if ($posts_query->have_posts()) :
 
             // Sanitize color value
             $border_color = !empty($color_box_v) ? esc_attr($color_box_v) : '#ddd';
+
+            // Get the permalink of the current post
+            $vehicle_link = get_permalink();
             ?>
             <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
                 <div class="vehicle-card-image">
@@ -57,6 +60,7 @@ if ($posts_query->have_posts()) :
                     <p><strong>Mileage:</strong> <?php echo esc_html($formatted_mileage); ?> miles</p>
                     <p><strong>Price:</strong> <?php echo esc_html($price_v); ?></p>
                     <p><strong>Color:</strong> <?php echo esc_html($color_box_v); ?></p>
+                    <a class="view-details-button" href="<?php echo esc_url($vehicle_link); ?>">View Details</a>
                 </div>
             </div>
         <?php
@@ -68,5 +72,6 @@ if ($posts_query->have_posts()) :
 endif;
 
 get_footer();
+
 
 

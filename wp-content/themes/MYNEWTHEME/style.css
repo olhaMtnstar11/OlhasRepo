@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.26
+Version: 1.27
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1839,4 +1839,20 @@ a:hover {
     .vehicle-card {
         width: calc(100% - 20px); /* Single column on small screens */
     }
+}
+.view-details-button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4aa691;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.view-details-button:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(158, 227, 191, 0.68);
 }
