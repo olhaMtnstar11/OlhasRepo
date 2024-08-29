@@ -37,24 +37,16 @@ get_header();
                     <button type="submit">Filter</button>
                 </div>
 
-
-
-
-
-
-
-
-
             </form>
         </div>
     <?php endif; ?>
 
-    <div class="vehicle-card-grid">
+    <div id="content-vehicle" class="vehicle-card-grid">
         <?php
         // Query the posts with filtering
         $args = array(
             'post_type'      => 'vehicle', // Custom post type
-            'posts_per_page' => -1,        // Display all posts
+            'posts_per_page' => 3,        // -1 Display all posts
         );
 
         // Initialize tax_query
@@ -130,6 +122,7 @@ get_header();
         endif;
         ?>
     </div>
+    <div id="loading" style="display: none;">Loading...</div>
 </div>
 
 <?php

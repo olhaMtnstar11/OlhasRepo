@@ -500,6 +500,120 @@ function load_custom_jquery() {
 }
 add_action('wp_enqueue_scripts', 'load_custom_jquery');
 
+
+
+function enqueue_infinite_scroll_script() {
+    wp_register_script(
+        'infinite-scroll',
+        get_template_directory_uri() . '/infinite-scroll.js',
+        array('jquery'),
+        null,
+        true // Load in footer
+    );
+    wp_enqueue_script('infinite-scroll');
+}
+add_action('wp_enqueue_scripts', 'enqueue_infinite_scroll_script');
+
+function load_more_vehicles() {
+    $paged = isset($_GET['page']) ? intval($_GET['page']) : 1;
+    $filter = isset($_GET['filter']) ? intval($_GET['filter']) : '';
+
+    $args = array(
+        'post_type'      => 'vehicle',
+        'paged'          => $paged,
+        'posts_per_page' => 3,
+    );
+
+    // Initialize tax_query
+    $tax_query = array('relation' => 'AND');
+
+    if (!empty($filter)) {
+        $tax_query[] = array(
+            'taxonomy' => 'vehicles-taxonomy',
+            'field'    => 'term_id',
+            'terms'    => $filter,
+        );
+    }
+
+    if (!empty($tax_query)) {
+        $args['tax_query'] = $tax_query;
+    }
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        ob_start();
+        while ($query->have_posts()) : $query->the_post();
+            // Output post HTML
+            $image_v = get_field('image_v');
+            $brand_v = get_field('brand_v');
+            $model_v = get_field('model_v');
+            $year_v = get_field('year_v');
+            $mileg_v = get_field('mileg_v');
+            $price_v = get_field('price_v');
+            $color_box_v = get_field('color_box_v');
+
+            if (is_array($image_v)) {
+                $image_url = esc_url($image_v['url']);
+                $image_alt = esc_attr($image_v['alt']);
+                $image_width = isset($image_v['width']) ? intval($image_v['width']) : 150;
+                $image_height = isset($image_v['height']) ? intval($image_v['height']) : 150;
+            } else {
+                $image_url = 'path/to/placeholder-image.png';
+                $image_alt = 'No image available';
+                $image_width = 150;
+                $image_height = 150;
+            }
+
+            $formatted_year = !empty($year_v) && is_numeric($year_v) ? intval($year_v) : 'N/A';
+            $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
+            $border_color = !empty($color_box_v) ? esc_attr($color_box_v) : '#ddd';
+            $vehicle_link = get_permalink();
+            ?>
+            <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
+                <div class="vehicle-card-image">
+                    <img src="<?php echo $image_url; ?>" alt="<?php echo $image_alt; ?>" width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>">
+                </div>
+                <div class="vehicle-card-content">
+                    <h2 class="vehicle-card-title"><?php echo esc_html($brand_v . ' ' . $model_v); ?></h2>
+                    <p><strong>Year:</strong> <?php echo esc_html($formatted_year); ?></p>
+                    <p><strong>Mileage:</strong> <?php echo esc_html($formatted_mileage); ?> miles</p>
+                    <p><strong>Price:</strong> <?php echo esc_html($price_v); ?></p>
+                    <p><strong>Color:</strong> <?php echo esc_html($color_box_v); ?></p>
+                    <a class="view-details-button" href="<?php echo esc_url($vehicle_link); ?>">View Details</a>
+                </div>
+            </div>
+        <?php
+        endwhile;
+        wp_reset_postdata();
+        $content = ob_get_clean();
+        echo json_encode(array('content' => $content));
+    else :
+        echo json_encode(array('content' => ''));
+    endif;
+
+    wp_die();
+}
+add_action('wp_ajax_load_more_vehicles', 'load_more_vehicles');
+add_action('wp_ajax_nopriv_load_more_vehicles', 'load_more_vehicles');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 
 
