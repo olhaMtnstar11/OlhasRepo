@@ -1,7 +1,7 @@
 /*
 Theme Name: MYNEWTHEME
 Text Domain: newtestwebproject
-Version: 1.27
+Version: 1.28
 Description: Fancy left sidebar theme
 Tags: left-sidebar, responsive, fancy
 Author: Olha
@@ -1855,4 +1855,72 @@ a:hover {
     color: #fff;
     text-decoration: none;
     background-color: rgba(158, 227, 191, 0.68);
+}
+
+/* Styles for the filter header section */
+#filter-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid rgba(131, 90, 65, 0.2); /* Distinct border to separate from the rest of the content */
+    margin-bottom: 20px; /* Space below the filter section */
+}
+
+#filter-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#filter-form::before {
+    content: "Filter Vehicles";
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(131, 90, 65, 0.8); /* Line below the header */
+    padding-bottom: 10px;
+}
+
+#filter-form form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: rgba(131, 90, 65, 0.9);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    color: #fff;
+    background-color: rgba(201, 130, 96, 0.77);
 }
