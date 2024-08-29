@@ -567,7 +567,9 @@ function load_more_vehicles() {
 
             $formatted_year = !empty($year_v) && is_numeric($year_v) ? intval($year_v) : 'N/A';
             $formatted_mileage = !empty($mileg_v) ? number_format($mileg_v) : 'N/A';
+
             $border_color = !empty($color_box_v) ? esc_attr($color_box_v) : '#ddd';
+
             $vehicle_link = get_permalink();
             ?>
             <div class="vehicle-card" style="border-color: <?php echo $border_color; ?>;">
@@ -586,18 +588,19 @@ function load_more_vehicles() {
         <?php
         endwhile;
         wp_reset_postdata();
-        $content = ob_get_clean();
-        echo json_encode(array('content' => $content));
+
+        $response = array(
+            'content' => ob_get_clean()
+        );
+
     else :
-        echo json_encode(array('content' => ''));
+        $response = array('content' => '');
     endif;
 
-    wp_die();
+    wp_send_json($response);
 }
 add_action('wp_ajax_load_more_vehicles', 'load_more_vehicles');
 add_action('wp_ajax_nopriv_load_more_vehicles', 'load_more_vehicles');
-
-
 
 
 
