@@ -20,10 +20,10 @@ get_header();
         <div id="filter-form">
             <form method="GET">
 
-                <div class="filter-group">
-                    <label for="vehicles-filter-select">Select a vehicle:</label>
+                <div class="filter-group col-3">
+                    <label for="vehicles-filter-select">Select a brand:</label>
                     <select name="vehicles_filter" id="vehicles-filter-select">
-                        <option value="">Select a vehicle</option>
+                        <option value="">Select a brand</option>
                         <?php foreach ($vehicles_terms as $vehicle_term) : ?>
                             <option value="<?php echo esc_attr($vehicle_term->term_id); ?>" <?php selected(isset($_GET['vehicles_filter']) ? $_GET['vehicles_filter'] : '', $vehicle_term->term_id); ?>>
                                 <?php echo esc_html($vehicle_term->name); ?>
@@ -32,7 +32,19 @@ get_header();
                     </select>
                 </div>
 
-                <button type="submit">Filter</button>
+                <div class="filter-group col-1">
+                    <label for="vehicles-filter-select" style="visibility: hidden"> - </label>
+                    <button type="submit">Filter</button>
+                </div>
+
+
+
+
+
+
+
+
+
             </form>
         </div>
     <?php endif; ?>
