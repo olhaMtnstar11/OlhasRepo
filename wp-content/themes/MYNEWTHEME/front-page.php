@@ -32,7 +32,7 @@
 
 
     <div class="label-component" >
-        front page php
+        front page php***
     </div>
 
     <section class="hero">
